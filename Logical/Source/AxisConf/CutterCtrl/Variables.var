@@ -1,0 +1,19 @@
+(*********************************************************************************
+ * Copyright: B&R Industrial Automation GmbH 
+ * Author:    kasliwals 
+ * Created:   December 11, 2023/10:45 AM 
+ *********************************************************************************)
+(*Function Blocks*)
+VAR
+	iFb_MpAxisSlave : MpAxisBasic; (*MpAxis Function Block*)
+	iFb_CamSeq : MpAxisCamSequencer;
+	iFb_MpAxisBasic : MpAxisBasic; (*MpAxis Function Block*)
+END_VAR
+(*Axis Structures*)
+VAR
+	iAx_CamSeq : AxisCamSeqMain_Typ;
+	SlaveStateSingle : AxisState_enum;
+	SlaveStateDual : AxisState_enum;
+	MasterState : AxisState_enum;
+	iVa_CutterCtrl : AxisCtrl_typ;
+END_VAR

@@ -1,0 +1,15 @@
+
+TYPE
+	MasterAxisState_enum : 
+		(
+		WAIT,
+		ACTIVE,
+		POWER_ON,
+		HOME,
+		READY_TO_START,
+		MODE_CHANGE,
+		MANUAL,
+		AUTOMATIC,
+		STOP
+		);
+END_TYPE

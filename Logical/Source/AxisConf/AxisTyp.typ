@@ -91,6 +91,9 @@ TYPE
 		Stop : BOOL;
 		PrintMark : BOOL;
 		ErrorReset : BOOL;
+		AutoMode : BOOL;
+		JogFwd : BOOL;
+		JogBack : BOOL;
 	END_STRUCT;
 	AxisPara_typ : 	STRUCT 
 		Speed : UINT;

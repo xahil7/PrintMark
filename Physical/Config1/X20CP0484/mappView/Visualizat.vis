@@ -3,22 +3,33 @@
   <StartPage pageRefId="HomePage" />
   <Pages>
     <Page refId="HomePage" />
+    <Page refId="AlarmPage" />
+    <Page refId="UserPage" />
+    <Page refId="ManualPage" />
+    <Page refId="ServicePage" />
   </Pages>
   <Navigations />
   <BindingsSets />
-  <EventBindingsSets />
+  <EventBindingsSets>
+    <EventBindingsSet refId="AlarmContent_eventbinding" />
+  </EventBindingsSets>
   <Dialogs />
   <Contents>
     <Content refId="HomeContent" />
     <Content refId="NavigationContent" />
     <Content refId="HeaderContent" />
     <Content refId="FooterContent" />
+    <Content refId="AlarmContent" />
+    <Content refId="UserContent" />
+    <Content refId="ManualContent" />
+    <Content refId="ServiceContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />
   <ExpressionsSets />
   <Configurations>
     <Configuration key="activityCount" value="false" />
+    <Configuration key="bootLogo" value="Media/logo.png" />
     <Gestures>
       <!--<SystemGesture1 touchPoints="2" />
 		  <SystemGesture2 touchPoints="2" />

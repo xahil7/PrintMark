@@ -4,5 +4,9 @@
   <Objects>
     <Object Type="Package" Description="AreaContents">AreaContents</Object>
     <Object Type="Package">HomePage</Object>
+    <Object Type="Package">AlarmPage</Object>
+    <Object Type="Package">UserPage</Object>
+    <Object Type="Package">ManualPage</Object>
+    <Object Type="Package">ServicePage</Object>
   </Objects>
 </Package>

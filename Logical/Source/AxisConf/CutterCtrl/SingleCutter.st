@@ -59,10 +59,10 @@ ACTION  SingleCutter :
 			END_IF
 		
 		OPERATION :
-			IF gMI_SlaveJogPositive THEN
+			IF iVa_CutterCtrl.Cmd.JogFwd THEN
 				SlaveStateSingle := JOG_POSITIVE;
 			END_IF
-			IF gMI_SlaveJogNegative THEN
+			IF iVa_CutterCtrl.Cmd.JogBack THEN
 				SlaveStateSingle := JOG_NEGATIVE;
 			END_IF
 		JOG_POSITIVE :
@@ -71,7 +71,7 @@ ACTION  SingleCutter :
 			ELSE
 				//Set an alarm Here
 				gAx_Slave.In.JogPositive := FALSE;
-				gMI_SlaveJogPositive := FALSE;
+				iVa_CutterCtrl.Cmd.JogFwd:= FALSE;
 				SlaveStateSingle := OPERATION;
 			END_IF
 			
@@ -81,7 +81,7 @@ ACTION  SingleCutter :
 			ELSE
 				//Set an warning alarm here
 				gAx_Slave.In.JogNegative := FALSE;
-				gMI_SlaveJogNegative := FALSE;
+				iVa_CutterCtrl.Cmd.JogBack:= FALSE;
 				SlaveStateSingle := OPERATION;
 			END_IF
 		

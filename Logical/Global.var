@@ -1,9 +1,6 @@
 VAR
 	gAxis01 : ACP10AXIS_typ;
 	gAxis02 : ACP10AXIS_typ;
-	gMI_SlaveJogPositive : BOOL;
-	gMI_SlaveJogNegative : BOOL;
-	gMI_MasteJogPositive : BOOL;
 	gAx_Slave : AxisBasic_type; (*Slave Axis Structure*)
 	gAx_Master : AxisBasic_type; (*MAster axis Structure*)
 END_VAR

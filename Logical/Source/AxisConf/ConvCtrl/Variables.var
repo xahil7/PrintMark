@@ -1,3 +1,10 @@
 VAR
 	MasterStep : MasterAxisState_enum;
+	iVa_ConvCtrl : AxisCtrl_typ;
+	iVa_RecPrintPosition : LREAL;
+END_VAR
+VAR CONSTANT
+	PRINT_MARK_LIMIT : LREAL := 300;
+	MM_TO_UDINT : LREAL := 0.0;
+	K_ZERO : LREAL := 0.0;
 END_VAR

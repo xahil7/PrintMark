@@ -21,8 +21,6 @@
     <NcDataObject Name="gAxis01i" Source="Axis.gAxis01obj.gAxis01i.dob" Memory="UserROM" Language="Ax" />
     <NcDataObject Name="gAxis02a" Source="Axis.gAxis02obj.gAxis02a.dob" Memory="UserROM" Language="Apt" />
     <NcDataObject Name="gAxis02i" Source="Axis.gAxis02obj.gAxis02i.dob" Memory="UserROM" Language="Ax" />
-    <NcDataObject Name="gAxis03a" Source="gAxis03obj.gAxis03a.dob" Memory="UserROM" Language="Apt" />
-    <NcDataObject Name="gAxis03i" Source="gAxis03obj.gAxis03i.dob" Memory="UserROM" Language="Ax" />
   </NcDataObjects>
   <Binaries>
     <BinaryObject Name="arsvcreg" Source="" Memory="UserROM" Language="Binary" />

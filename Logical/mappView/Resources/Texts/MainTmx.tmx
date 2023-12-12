@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT/Main</prop>
+  </header>
+  <body>
+    <tu tuid="1">
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Servus Welt!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>PRINT MARK CROSS-CUTTER</seg>
+      </tuv>
+    </tu>
+    <tu tuid="2">
+      <tuv xml:lang="en">
+        <seg>HOME</seg>
+      </tuv>
+    </tu>
+    <tu tuid="3">
+      <tuv xml:lang="en">
+        <seg>ALARM</seg>
+      </tuv>
+    </tu>
+    <tu tuid="4">
+      <tuv xml:lang="en">
+        <seg>USER</seg>
+      </tuv>
+    </tu>
+    <tu tuid="5">
+      <tuv xml:lang="en">
+        <seg>MANUAL</seg>
+      </tuv>
+    </tu>
+    <tu tuid="6">
+      <tuv xml:lang="en">
+        <seg>DIAG.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="7">
+      <tuv xml:lang="en">
+        <seg>ACK.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="8">
+      <tuv xml:lang="en">
+        <seg>ACK. All</seg>
+      </tuv>
+    </tu>
+    <tu tuid="9" />
+    <tu tuid="10" />
+    <tu tuid="11" />
+    <tu tuid="12" />
+    <tu tuid="13" />
+    <tu tuid="14" />
+    <tu tuid="15" />
+    <tu tuid="16" />
+    <tu tuid="17" />
+    <tu tuid="18" />
+    <tu tuid="19" />
+    <tu tuid="20" />
+    <tu tuid="21" />
+    <tu tuid="22" />
+    <tu tuid="23" />
+    <tu tuid="24" />
+    <tu tuid="25" />
+    <tu tuid="26" />
+    <tu tuid="27" />
+  </body>
+</tmx>

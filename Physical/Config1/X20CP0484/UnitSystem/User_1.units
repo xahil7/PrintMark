@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="UserUnit" Type="Units" >
+    <Group ID="Classification[1]">
+      <Property ID="Group[1]" Value="Custom" />
+      <Property ID="Category[1]" Value="Custom" />
+    </Group>
+  </Element>
+</Configuration>

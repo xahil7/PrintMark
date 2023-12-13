@@ -6,7 +6,7 @@ ACTION  SingleCutter :
 				SlaveStateSingle := POWER_ON;
 			END_IF
 		ACTIVE :
-			IF gAx_Slave.Out.Position >= 2653 AND gAx_Master.Out.Position <= 3013 THEN
+			IF gAx_Slave.Out.Position >= LOWER_CUT_POS AND gAx_Master.Out.Position <= UPPER_CUT_POS THEN
 				gAx_Slave.In.Power := FALSE;
 			ELSE
 				SlaveStateSingle := POWER_ON;
@@ -16,10 +16,10 @@ ACTION  SingleCutter :
 			IF gAx_Slave.Out.Info.ReadyToPowerOn    THEN
 				gAx_Slave.In.Power := TRUE;
 			END_IF
-			IF gAx_Slave.Out.PowerOn AND gAx_Slave.Out.Position < 2653 THEN
+			IF gAx_Slave.Out.PowerOn AND gAx_Slave.Out.Position < LOWER_CUT_POS THEN
 				SlaveStateSingle := NEGATIVE_HOMING_MODE;
 			END_IF
-			IF gAx_Slave.Out.PowerOn AND gAx_Slave.Out.Position > 3013 THEN
+			IF gAx_Slave.Out.PowerOn AND gAx_Slave.Out.Position > UPPER_CUT_POS THEN
 				SlaveStateSingle := POSITIVE_HOMING_MODE;
 			END_IF
 			
@@ -66,7 +66,7 @@ ACTION  SingleCutter :
 				SlaveStateSingle := JOG_NEGATIVE;
 			END_IF
 		JOG_POSITIVE :
-			IF (gAx_Slave.Out.Position < 2616 OR gAx_Slave.Out.Position > 3013 ) AND iVa_CutterCtrl.Status.JogPosReady THEN
+			IF (gAx_Slave.Out.Position < LOWER_BUFER OR gAx_Slave.Out.Position > UPPER_CUT_POS ) AND iVa_CutterCtrl.Status.JogPosReady THEN
 				gAx_Slave.In.JogPositive := TRUE;
 			ELSE
 				//Set an alarm Here
@@ -74,9 +74,12 @@ ACTION  SingleCutter :
 				iVa_CutterCtrl.Cmd.JogFwd:= FALSE;
 				SlaveStateSingle := OPERATION;
 			END_IF
-			
+			IF NOT iVa_CutterCtrl.Cmd.JogFwd THEN
+				gAx_Slave.In.JogPositive := FALSE;
+				SlaveStateSingle := OPERATION;
+			END_IF
 		JOG_NEGATIVE :
-			IF ( gAx_Slave.Out.Position > 3050 OR gAx_Slave.Out.Position <2653 ) AND iVa_CutterCtrl.Status.JogNegReady THEN
+			IF ( gAx_Slave.Out.Position > UPPER_BUFFER OR gAx_Slave.Out.Position <LOWER_CUT_POS ) AND iVa_CutterCtrl.Status.JogNegReady THEN
 				gAx_Slave.In.JogNegative := TRUE;
 			ELSE
 				//Set an warning alarm here
@@ -84,28 +87,43 @@ ACTION  SingleCutter :
 				iVa_CutterCtrl.Cmd.JogBack:= FALSE;
 				SlaveStateSingle := OPERATION;
 			END_IF
+			IF NOT iVa_CutterCtrl.Cmd.JogBack THEN
+				gAx_Slave.In.JogNegative := FALSE;
+				SlaveStateSingle := OPERATION;
+			END_IF
+			
+		IN_CUTTING_ZONE :
+			gAx_Slave.In.Power := FALSE;
+			IF gAx_Slave.Out.Position < LOWER_CUT_POS OR gAx_Slave.Out.Position >UPPER_CUT_POS AND gAx_Slave.Out.IsHomed THEN
+				gAx_Slave.In.Power := TRUE;
+				SlaveStateSingle := OPERATION;
+			ELSIF  gAx_Slave.Out.Position < LOWER_CUT_POS OR gAx_Slave.Out.Position >UPPER_CUT_POS AND NOT gAx_Slave.Out.IsHomed THEN
+				SlaveStateSingle := POWER_ON;
+			END_IF
 		
 	END_CASE
-	IF gAx_Slave.Out.Position >=2653 AND gAx_Slave.Out.Position <=3013 THEN
+	IF gAx_Slave.Out.Position >=LOWER_CUT_POS AND gAx_Slave.Out.Position <=UPPER_CUT_POS THEN
 		iVa_CutterCtrl.Status.JogNegReady := FALSE;
 		iVa_CutterCtrl.Status.JogPosReady := FALSE;
-	ELSIF gAx_Slave.Out.Position < 2653  THEN
+		SlaveStateSingle := IN_CUTTING_ZONE;
+	ELSIF gAx_Slave.Out.Position < LOWER_CUT_POS  THEN
 		iVa_CutterCtrl.Status.JogNegReady := TRUE;
-		IF gAx_Slave.Out.Position < 2616 THEN
+		IF gAx_Slave.Out.Position < LOWER_BUFER THEN
 			iVa_CutterCtrl.Status.JogPosReady := TRUE;
 		ELSE
 			iVa_CutterCtrl.Status.JogPosReady := FALSE;
 		END_IF
 		
-	ELSIF gAx_Slave.Out.Position > 3013 THEN
+	ELSIF gAx_Slave.Out.Position > UPPER_CUT_POS THEN
 			iVa_CutterCtrl.Status.JogPosReady := TRUE;
-			IF gAx_Slave.Out.Position > 3050 THEN
+			IF gAx_Slave.Out.Position > UPPER_BUFFER THEN
 				iVa_CutterCtrl.Status.JogNegReady := TRUE;
 		ELSE
 			iVa_CutterCtrl.Status.JogNegReady := FALSE;
 			END_IF
 			
 	END_IF
+	
 	
 	
 END_ACTION

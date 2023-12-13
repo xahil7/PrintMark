@@ -12,6 +12,7 @@
   <BindingsSets />
   <EventBindingsSets>
     <EventBindingsSet refId="AlarmContent_eventbinding" />
+    <EventBindingsSet refId="UserContent_eventbinding" />
   </EventBindingsSets>
   <Dialogs />
   <Contents>

@@ -1,4 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Content id="UserContent" height="540" width="1079" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2">
-  <Widgets></Widgets>
+<Content id="UserContent" height="540" width="1079" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.UserList" id="UserList" top="12" left="372" width="700" height="512" zIndex="0">
+      <Widgets />
+    </Widget>
+    <Widget xsi:type="widgets.brease.Login" id="Login" top="12" left="44" zIndex="1" />
+    <Widget xsi:type="widgets.brease.LogoutButton" id="LogoutButton" top="100" left="64" width="92" zIndex="2" text="Logout" />
+    <Widget xsi:type="widgets.brease.Button" id="btnAdduser" top="188" left="40" width="88" height="44" zIndex="3" text="$IAT/Main/28" borderStyle="double" cornerRadius="10px" borderColor="rgba(255, 224, 192, 1)" />
+    <Widget xsi:type="widgets.brease.Button" id="btnModifyUser" top="188" left="154" width="88" height="44" zIndex="4" text="$IAT/Main/30" borderStyle="double" cornerRadius="10px" borderColor="rgba(255, 224, 192, 1)" />
+    <Widget xsi:type="widgets.brease.Button" id="btnDeleteUser" top="188" left="268" width="88" height="44" zIndex="5" text="$IAT/Main/29" borderStyle="double" cornerRadius="10px" borderColor="rgba(255, 224, 192, 1)" />
+  </Widgets>
 </Content>

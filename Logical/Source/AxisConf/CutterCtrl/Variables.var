@@ -17,3 +17,10 @@ VAR
 	MasterState : AxisState_enum;
 	iVa_CutterCtrl : AxisCtrl_typ;
 END_VAR
+(*CONSTANTS*)
+VAR CONSTANT
+	LOWER_CUT_POS : UINT := 2653;
+	UPPER_CUT_POS : UINT := 3013;
+	LOWER_BUFER : UINT := 2616;
+	UPPER_BUFFER : UINT := 3050;
+END_VAR

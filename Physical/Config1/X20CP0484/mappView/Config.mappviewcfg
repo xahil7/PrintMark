@@ -6,9 +6,11 @@
       <Selector ID="WebServerProtocol" Value="1">
         <Property ID="WebServerPort" Value="81" />
       </Selector>
-      <Property ID="MaxClientConnections" Value="1" />
-      <Property ID="MaxBRClientConnections" Value="0" />
-      <Selector ID="AuthenticationMode" Value="AuthenticationModeRbac" />
+      <Property ID="MaxClientConnections" Value="4" />
+      <Property ID="MaxBRClientConnections" Value="4" />
+      <Selector ID="AuthenticationMode" Value="AuthenticationModeMpUserX">
+        <Property ID="MpUserXUserPreferences" Value="TRUE" />
+      </Selector>
       <Group ID="TcpProxyConf">
         <Selector ID="InsecureMode" Value="1" />
       </Group>

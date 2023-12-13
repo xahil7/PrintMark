@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingSet id="UserContent_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+    <EventBinding id="UserContent.btnAdduser.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="UserContent" widgetRefId="btnAdduser" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.UserList.Action" contentRefId="UserContent" widgetRefId="UserList">
+            <Method xsi:type="widgets.brease.UserList.Action.OpenAddUserDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="UserContent.btnModifyUser.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="UserContent" widgetRefId="btnModifyUser" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.UserList.Action" contentRefId="UserContent" widgetRefId="UserList">
+            <Method xsi:type="widgets.brease.UserList.Action.OpenModifyUserDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="UserContent.btnDeleteUser.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="UserContent" widgetRefId="btnDeleteUser" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.UserList.Action" contentRefId="UserContent" widgetRefId="UserList">
+            <Method xsi:type="widgets.brease.UserList.Action.DeleteUser" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Bindings>
+</EventBindingSet>

@@ -3,8 +3,13 @@
 <Configuration>
   <Element ID="Administrators" Type="Role">
     <Property ID="RoleID" Value="1" />
+    <Property ID="Description" Value="Role for Admin" />
   </Element>
-  <Element ID="Everyone" Type="Role" >
+  <Element ID="Everyone" Type="Role">
     <Property ID="RoleID" Value="2" />
+  </Element>
+  <Element ID="Operators" Type="Role">
+    <Property ID="RoleID" Value="3" />
+    <Property ID="Description" Value="Role for" />
   </Element>
 </Configuration>

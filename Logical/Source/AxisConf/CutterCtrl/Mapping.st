@@ -100,7 +100,7 @@ ACTION Mapping:
 	iAx_CamSeq.Out.InCompensation		:= iFb_CamSeq.InCompensation;
 	iAx_CamSeq.Out.InSync				:= iFb_CamSeq.InSync;
 	iAx_CamSeq.Out.Info					:= iFb_CamSeq.Info;
-	
+
 	//Assigning Input Structure to Axis Cam Sequencer Function Block
 	iFb_CamSeq.MpLink					:= ADR(gAxisSlave);
 	iFb_CamSeq.Enable					:= TRUE;

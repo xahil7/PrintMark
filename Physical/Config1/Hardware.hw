@@ -6,7 +6,11 @@
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
     <Parameter ID="Terminal" Value="true" />
+    <Parameter ID="Startmode" Value="2" />
+    <Parameter ID="ShowBootlogoWeb" Value="1" />
+    <Parameter ID="TimeZone" Value="250" />
     <Parameter ID="PasswordVNC" Value="" />
+    <Parameter ID="BrowserVKeyboard" Value="0" />
     <Parameter ID="PasswordCIFS" Value="" />
     <Parameter ID="PasswordService" Value="" />
   </Module>

@@ -9,7 +9,9 @@
     <Page refId="ServicePage" />
   </Pages>
   <Navigations />
-  <BindingsSets />
+  <BindingsSets>
+    <BindingsSet refId="AlarmContent_binding" />
+  </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="AlarmContent_eventbinding" />
     <EventBindingsSet refId="UserContent_eventbinding" />

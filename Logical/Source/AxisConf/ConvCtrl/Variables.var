@@ -8,3 +8,6 @@ VAR CONSTANT
 	MM_TO_UDINT : LREAL := 0.0;
 	K_ZERO : LREAL := 0.0;
 END_VAR
+VAR
+	iVa_SetMasterInputs : MC_BR_SetHardwareInputs;
+END_VAR

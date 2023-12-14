@@ -6,5 +6,6 @@
     <Object Type="File">Visualizat.vis</Object>
     <Object Type="File">AlarmContent.eventbinding</Object>
     <Object Type="File">UserContent.eventbinding</Object>
+    <Object Type="File">AlarmContent.binding</Object>
   </Objects>
 </Package>

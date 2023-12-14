@@ -4,7 +4,7 @@
   <Group ID="ACP10AXIS_typ">
     <Group ID="dig_in">
       <Group ID="level">
-        <Parameter ID="reference" Value="ncACTIV_HI" />
+        <Parameter ID="reference" Value="ncACTIV_HI + ncFORCE" />
         <Parameter ID="pos_hw_end" Value="ncACTIV_HI" />
         <Parameter ID="neg_hw_end" Value="ncACTIV_HI" />
         <Parameter ID="trigger1" Value="ncACTIV_HI" />

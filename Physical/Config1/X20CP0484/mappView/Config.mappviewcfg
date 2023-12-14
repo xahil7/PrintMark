@@ -7,7 +7,7 @@
         <Property ID="WebServerPort" Value="81" />
       </Selector>
       <Property ID="MaxClientConnections" Value="4" />
-      <Property ID="MaxBRClientConnections" Value="4" />
+      <Property ID="MaxBRClientConnections" Value="0" />
       <Selector ID="AuthenticationMode" Value="AuthenticationModeMpUserX">
         <Property ID="MpUserXUserPreferences" Value="TRUE" />
       </Selector>

@@ -1,8 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="UserContent" height="540" width="1079" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.UserList" id="UserList" top="12" left="372" width="700" height="512" zIndex="0">
-      <Widgets />
+    <Widget xsi:type="widgets.brease.UserList" id="UserList" top="12" left="372" width="700" height="512" zIndex="0" itemsPerPage="4">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.UserListItem" id="UserListItem1" width="156" zIndex="0" text="UserName" />
+        <Widget xsi:type="widgets.brease.UserListItem" id="UserListItem2" zIndex="1" columnType="FullName" text="Full Name" />
+        <Widget xsi:type="widgets.brease.UserListItem" id="UserListItem3" width="140" zIndex="2" columnType="IsAdmin" text="IsAdmin" />
+        <Widget xsi:type="widgets.brease.UserListItem" id="UserListItem4" zIndex="3" columnType="LastLogin" text="Last Login" />
+      </Widgets>
     </Widget>
     <Widget xsi:type="widgets.brease.Login" id="Login" top="12" left="44" zIndex="1" />
     <Widget xsi:type="widgets.brease.LogoutButton" id="LogoutButton" top="100" left="64" width="92" zIndex="2" text="Logout" />

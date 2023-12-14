@@ -4,6 +4,9 @@ PROGRAM _INIT
 	gAx_Master.In.Parameters.Jog.Acceleration := 480000;
 	gAx_Master.In.Parameters.Jog.Deceleration := 4800000;
 	gAx_Master.In.Parameters.Jog.Velocity := 45;
+	gAx_Master.In.Parameters.Home.Mode := mpAXIS_HOME_MODE_ABS_SWITCH;
+	gAx_Master.In.Parameters.Home.StartVelocity := 200;
+	gAx_Master.In.Parameters.Home.HomingDirection := mpAXIS_HOME_DIR_NEGATIVE;
 	
 	
 END_PROGRAM
@@ -80,6 +83,10 @@ PROGRAM _CYCLIC
 	END_CASE
 	
 	iVa_ConvCtrl.Cmd.PrintMark := gAx_Slave.Out.Info.DigitalInputsStatus.Trigger1;
+	iVa_SetMasterInputs.Axis := ADR(gAxis01);
+	iVa_SetMasterInputs.Enable := TRUE;
+	iVa_SetMasterInputs.HomeSwitch := gAx_Slave.Out.Info.DigitalInputsStatus.Trigger1;
+	iVa_SetMasterInputs();
 	
 END_PROGRAM
 

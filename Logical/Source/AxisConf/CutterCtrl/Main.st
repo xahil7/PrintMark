@@ -10,13 +10,47 @@ PROGRAM _INIT
 	gAx_Slave.In.Parameters.Jog.Acceleration := 108000;
 	gAx_Slave.In.Parameters.Jog.Deceleration := 1080000;
 	gAx_Slave.In.Parameters.Jog.Velocity := 360;
-	 
+	
+	
+	iVa_RegCaptureAdvPara.EventSourceParID := ACP10PAR_STAT_TRIGGER1;
+	iVa_RegCaptureAdvPara.Edge := ncP_EDGE;
+	iVa_RegCaptureAdvPara.MinWidth := 50;
+	iVa_RegCaptureAdvPara.MaxWidth := 200;
+	iVa_RegCaptureAdvPara.WindowNeg := 200;
+	iVa_RegCaptureAdvPara.WindowPos := 200;
+	iVa_RegCaptureAdvPara.SensorDelay := 200;
+	iVa_RegCaptureAdvPara.CorrectCurrentCycle := TRUE;
+	iVa_RegCaptureAdvPara.CorrectionValueLimitNeg := 70;
+	iVa_RegCaptureAdvPara.CorrectionValueLimitPos := 70;
+	
+	iVa_RegCaptureConfig.DistanceToSensor := 1050;
+	iVa_RegCaptureConfig.ProductLength := 700;
+	iVa_RegCaptureConfig.RegMarkPosition := 700;
+	iVa_RegCaptureConfig.RegMarkOffset := 10;
+	
 END_PROGRAM
 
 PROGRAM _CYCLIC
 	
 	
+//	IF iVa_LastValidPM <> iFb_RegCapture.ValidRMs AND iFb_RegCapture.ValidRMs <> 0 THEN
+//		IF iVa_LastValidPM = 1 THEN
+//			iAx_CamSeq.In.Signal1 := FALSE;
+//		ELSE
+//			iAx_CamSeq.In.Signal1 := TRUE;
+//		END_IF
+//		
+//		iVa_LastValidPM := iFb_RegCapture.ValidRMs;
+//		
+//	END_IF
+//	
+//	IF iAx_CamSeq.Out.ActStIndex = 1 THEN
+//		iAx_CamSeq.In.Signal1 := FALSE;
+//	END_IF
+//	
 	
+	SingleCam;
+	RegCapture;
 	SingleCutter;
 	Mapping;
 END_PROGRAM

@@ -1,0 +1,11 @@
+VAR
+	iMI_ConSetSpeed : REAL := 120;
+	iMI_ConActSpeed : REAL;
+END_VAR
+VAR CONSTANT
+	PRODUCT_LENGTH : REAL := 700.0;
+	PER_SEC : REAL := 60.0;
+END_VAR
+VAR
+	iVA_ConActSpeed : REAL;
+END_VAR

@@ -10,12 +10,12 @@ ACTION SingleCam:
 	(** STATE 1 - WAIT FOR TRIGGER **) 
 	
 	iAx_CamSeq.In.Parameters.Configuration.State[1].CamProfileIndex := 16#FFFE; 
-	iAx_CamSeq.In.Parameters.Configuration.State[1].MasterFactor := 250 ; //Master Dist. 
-	iAx_CamSeq.In.Parameters.Configuration.State[1].SlaveFactor := 360; //Slave Dist. 
+	iAx_CamSeq.In.Parameters.Configuration.State[1].MasterFactor := 300 ; //Master Dist. 
+	iAx_CamSeq.In.Parameters.Configuration.State[1].SlaveFactor := -400; //Slave Dist. 
 	
 	iAx_CamSeq.In.Parameters.Configuration.State[1].CompMode := ncONLYCOMP; 
-	iAx_CamSeq.In.Parameters.Configuration.State[1].MasterCompDistance := 450; //Master Dist. 
-	iAx_CamSeq.In.Parameters.Configuration.State[1].SlaveCompDistance := 3240; //Slave Dist. 
+	iAx_CamSeq.In.Parameters.Configuration.State[1].MasterCompDistance := 400; //Master Dist. 
+	iAx_CamSeq.In.Parameters.Configuration.State[1].SlaveCompDistance := -3200; //Slave Dist. 
 	
 	iAx_CamSeq.In.Parameters.Configuration.State[1].Event[0].Type := ncST_END; //Trigger 
 	iAx_CamSeq.In.Parameters.Configuration.State[1].Event[0].Attribute := ncST_END; //Reaction
@@ -24,8 +24,8 @@ ACTION SingleCam:
 	
 	
 	iAx_CamSeq.In.Parameters.Configuration.State[2].CamProfileIndex := 16#FFFF; 
-	iAx_CamSeq.In.Parameters.Configuration.State[2].MasterFactor := 250; //Master Dist. 
-	iAx_CamSeq.In.Parameters.Configuration.State[2].SlaveFactor := 360; //Slave Dist. 
+	iAx_CamSeq.In.Parameters.Configuration.State[2].MasterFactor := 300; //Master Dist. 
+	iAx_CamSeq.In.Parameters.Configuration.State[2].SlaveFactor := -400; //Slave Dist. 
 	
 	iAx_CamSeq.In.Parameters.Configuration.State[2].Event[0].Type := ncST_END; //Trigger 
 	iAx_CamSeq.In.Parameters.Configuration.State[2].Event[0].Attribute := ncST_END; //Reaction
@@ -35,12 +35,12 @@ ACTION SingleCam:
 	
 	//ONLY FOR FIRST PRINT MARK
 	iAx_CamSeq.In.Parameters.Configuration.State[3].CamProfileIndex := 16#FFFE; 
-	iAx_CamSeq.In.Parameters.Configuration.State[3].MasterFactor := 250; //Master Dist. 
-	iAx_CamSeq.In.Parameters.Configuration.State[3].SlaveFactor := 360; //Slave Dist. 
+	iAx_CamSeq.In.Parameters.Configuration.State[3].MasterFactor := 300; //Master Dist. 
+	iAx_CamSeq.In.Parameters.Configuration.State[3].SlaveFactor := -400; //Slave Dist. 
 	
 	iAx_CamSeq.In.Parameters.Configuration.State[3].CompMode := ncONLYCOMP; 
 	iAx_CamSeq.In.Parameters.Configuration.State[3].MasterCompDistance := 1650; //Master Dist. 
-	iAx_CamSeq.In.Parameters.Configuration.State[3].SlaveCompDistance := 1620; //Slave Dist. 
+	iAx_CamSeq.In.Parameters.Configuration.State[3].SlaveCompDistance := -1580; //Slave Dist. 
 	
 	iAx_CamSeq.In.Parameters.Configuration.State[3].Event[0].Type :=ncST_END; //Trigger 
 	iAx_CamSeq.In.Parameters.Configuration.State[3].Event[0].Attribute := ncST_END; //Reaction

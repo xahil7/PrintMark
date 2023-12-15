@@ -2,6 +2,7 @@
 <?AutomationStudio FileVersion="4.9"?>
 <SwConfiguration CpuAddress="SL1" xmlns="http://br-automation.co.at/AS/SwConfiguration">
   <TaskClass Name="Cyclic#1">
+    <Task Name="AutoCtrl" Source="Source.AutoCtrl.AutoCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="ConvCtrl" Source="Source.AxisConf.ConvCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="CutterCtrl" Source="Source.AxisConf.CutterCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
@@ -9,7 +10,9 @@
   <TaskClass Name="Cyclic#3" />
   <TaskClass Name="Cyclic#4" />
   <TaskClass Name="Cyclic#5" />
-  <TaskClass Name="Cyclic#6" />
+  <TaskClass Name="Cyclic#6">
+    <Task Name="Visu" Source="InfraStructure.Visu.Visu.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+  </TaskClass>
   <TaskClass Name="Cyclic#7" />
   <TaskClass Name="Cyclic#8" />
   <DataObjects>
@@ -29,6 +32,8 @@
     <BinaryObject Name="FWRules" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="TCData" Source="" Memory="SystemROM" Language="Binary" />
     <BinaryObject Name="TCLang" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="arflatprv" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="arcoal" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Acp10map" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="acp10cfg" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="SlaveAxis" Source="" Memory="UserROM" Language="Binary" />
@@ -41,6 +46,11 @@
     <BinaryObject Name="MasterAxis" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="iomap" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Role" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="DataRConf" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="AlarmConf" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="UserConf" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="User_1" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="TC" Source="" Memory="UserROM" Language="Binary" />
   </Binaries>
   <Libraries>
     <LibraryObject Name="Acp10man" Source="Libraries.Acp10man.lby" Memory="UserROM" Language="Binary" Debugging="true" />
@@ -54,11 +64,6 @@
     <LibraryObject Name="MpBase" Source="Libraries.MpBase.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="MpCom" Source="Libraries.MpCom.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="MpServer" Source="Libraries.MpServer.lby" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="arssl" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="asieccon" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="powerlnk" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="asbrstr" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="aruser" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="MC_RegMa" Source="Libraries.MC_RegMa.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="MpAlarmX" Source="Libraries.MpAlarmX.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="astime" Source="Libraries.astime.lby" Memory="UserROM" Language="binary" Debugging="true" />
@@ -66,5 +71,13 @@
     <LibraryObject Name="FileIO" Source="Libraries.FileIO.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="DataObj" Source="Libraries.DataObj.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="MpUserX" Source="Libraries.MpUserX.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="arssl" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="asieccon" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="powerlnk" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="asbrstr" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="aruser" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="arcert" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="aseth" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="ashw" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>

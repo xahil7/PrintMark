@@ -14,13 +14,13 @@ VAR
 	iAx_CamSeq : AxisCamSeqMain_Typ;
 	SlaveStateSingle : AxisState_enum;
 	SlaveStateDual : AxisState_enum;
-	iVa_CutterCtrl : AxisCtrl_typ;
+	iCutterCtrl : AxisCtrl_typ;
 END_VAR
 (*CONSTANTS*)
 VAR CONSTANT
 	LOWER_CUT_POS : LREAL := 2653;
 	UPPER_CUT_POS : LREAL := 3013;
-	LOWER_BUFER : LREAL := 2652;
+	LOWER_BUFER : LREAL := 2643;
 	UPPER_BUFFER : LREAL := 3014;
 END_VAR
 VAR
@@ -31,4 +31,9 @@ VAR
 	LIMIT_END : LREAL := 3599;
 	ZERO : LREAL := 0;
 	iVa_LastValidPM : UDINT := 1;
+END_VAR
+VAR CONSTANT
+	HOMING_OFFSET : LREAL := 1033;
+	HOMING_VEL : REAL := 300;
+	START_VEL : REAL := 150;
 END_VAR

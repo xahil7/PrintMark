@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="HomeContent_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gAx_Slave.Out.PowerOn" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList1" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gAx_Slave.Out.IsHomed" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList2" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gAx_Slave.Out.Error" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList3" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gAx_Master.Out.PowerOn" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList5" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gAx_Master.Out.IsHomed" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList6" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gAx_Master.Out.Error" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList7" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gAx_Master.Out.MoveActive" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList8" attribute="selectedIndex" />
+</Binding>
+		<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:pRegCapture.ProductsWithoutRM" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="outPWoPM" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:pRegCapture.ValidRMs" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="outValidPM" attribute="value" />
+</Binding>
+
+
+
+
+
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:pConvCtrl.Cmd.PrintMark" attribute="value" samplingRate="fast" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList9" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gAx_Master.Out.Info.DigitalInputsStatus.Trigger2" attribute="value" samplingRate="fast" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList10" attribute="selectedIndex" />
+</Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Visu:iMI_ConSetSpeed" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="inSetSpeed" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gAx_Slave.Out.Position" attribute="value" samplingRate="fast" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="SliderSlavePos" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Visu:iMI_ConActSpeed" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="outActSpeed" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:pAx_CamSeq.Out.InSync" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList4" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iMI_LastBagLen" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="outlastBagLn" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iMI_AvgBagLen" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="outAvgBagLn" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.Cmd.Stop" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="btnStop" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.Cmd.Start" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="btnStart" attribute="value" />
+</Binding>
+</Bindings>
+</BindingsSet>

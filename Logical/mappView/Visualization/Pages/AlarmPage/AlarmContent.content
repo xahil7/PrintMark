@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Content id="AlarmContent" height="540" width="1079" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Content id="AlarmContent" height="620" width="1130" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.AlarmList" id="AlarmList" top="28" left="32" width="1036" height="412" zIndex="0">
+    <Widget xsi:type="widgets.brease.AlarmList" id="AlarmList" top="28" left="32" width="1084" height="504" zIndex="0">
       <Widgets>
         <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItem1" width="220" zIndex="0" columnType="name" text="AlarmName" />
         <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItem2" width="216" zIndex="1" text="Message" />
@@ -10,7 +10,7 @@
         <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItem5" zIndex="4" text="ErrorCode" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.Button" id="btnAck" top="464" left="156" width="104" height="62" zIndex="1" text="$IAT/Main/7" fontSize="16px" bold="true" />
-    <Widget xsi:type="widgets.brease.Button" id="btnAckAll" top="464" left="780" width="104" height="62" zIndex="2" text="$IAT/Main/8" fontSize="16px" bold="true" />
+    <Widget xsi:type="widgets.brease.Button" id="btnAck" top="544" left="156" width="104" height="62" zIndex="1" text="$IAT/Main/7" cornerRadius="10px" fontSize="16px" bold="true" />
+    <Widget xsi:type="widgets.brease.Button" id="btnAckAll" top="544" left="780" width="104" height="62" zIndex="2" text="$IAT/Main/8" cornerRadius="10px" fontSize="16px" bold="true" />
   </Widgets>
 </Content>

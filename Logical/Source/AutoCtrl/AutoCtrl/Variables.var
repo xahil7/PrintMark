@@ -1,0 +1,34 @@
+VAR
+	Status_CutterCtrl : UINT;
+	CutterAdd : UDINT;
+	SizeCutter : UDINT;
+	Status_ConvCtrl : UINT;
+	ConvAdd : UDINT;
+	SizeConv : UDINT;
+	pCutterCtrl : REFERENCE TO AxisCtrl_typ;
+	pConvCtrl : REFERENCE TO AxisCtrl_typ;
+	AutoCtrlState : AutoCtrl_enum;
+	iAutoCtrl : AutoCtrl_typ;
+	Status_CamSeq : UINT;
+	CamAdd : UDINT;
+	SizeCam : UDINT;
+	pAx_CamSeq : REFERENCE TO AxisCamSeqMain_Typ;
+END_VAR
+VAR CONSTANT
+	UPPER_CUT_POS : LREAL := 3013;
+	LOWER_CUT_POS : LREAL := 2653;
+END_VAR
+VAR
+	Status_RegCapture : UINT;
+	RegAdd : UDINT;
+	RegSize : UDINT;
+	pRegCapture : REFERENCE TO MC_BR_RegMarkCapture002;
+	iMI_LastBagLen : REAL;
+END_VAR
+VAR CONSTANT
+	TEN : REAL := 10;
+END_VAR
+VAR
+	iMI_AvgBagLen : REAL;
+	iMI_CurrentMode : STRING[80];
+END_VAR

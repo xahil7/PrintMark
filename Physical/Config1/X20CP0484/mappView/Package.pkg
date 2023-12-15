@@ -7,5 +7,7 @@
     <Object Type="File">AlarmContent.eventbinding</Object>
     <Object Type="File">UserContent.eventbinding</Object>
     <Object Type="File">AlarmContent.binding</Object>
+    <Object Type="File">HomeContent.binding</Object>
+    <Object Type="File">HeaderContent.binding</Object>
   </Objects>
 </Package>

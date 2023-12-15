@@ -1,6 +1,6 @@
 VAR
 	MasterStep : MasterAxisState_enum;
-	iVa_ConvCtrl : AxisCtrl_typ;
+	iConvCtrl : AxisCtrl_typ;
 	iVa_RecPrintPosition : LREAL;
 END_VAR
 VAR CONSTANT

@@ -3,4 +3,5 @@ VAR
 	gAxis02 : ACP10AXIS_typ;
 	gAx_Slave : AxisBasic_type; (*Slave Axis Structure*)
 	gAx_Master : AxisBasic_type; (*MAster axis Structure*)
+	gMI_ModeConfirm : BOOL;
 END_VAR

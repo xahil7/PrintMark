@@ -1,0 +1,15 @@
+
+TYPE
+	AutoCtrl_enum : 
+		(
+		WAIT,
+		MODE_SELECT,
+		HOMING_DONE,
+		MANUAL_START,
+		AUTO_START,
+		STOP,
+		MANUAL_JOGF,
+		MANUAL_JOGN,
+		IN_CUTTING_ZONE
+		);
+END_TYPE

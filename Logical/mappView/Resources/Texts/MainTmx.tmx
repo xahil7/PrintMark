@@ -161,10 +161,89 @@
         <seg>Modify</seg>
       </tuv>
     </tu>
-    <tu tuid="31" />
-    <tu tuid="32" />
-    <tu tuid="33" />
-    <tu tuid="34" />
-    <tu tuid="35" />
+    <tu tuid="31">
+      <tuv xml:lang="en">
+        <seg>JOG</seg>
+      </tuv>
+    </tu>
+    <tu tuid="32">
+      <tuv xml:lang="en">
+        <seg>POWER</seg>
+      </tuv>
+    </tu>
+    <tu tuid="33">
+      <tuv xml:lang="en">
+        <seg>START</seg>
+      </tuv>
+    </tu>
+    <tu tuid="34">
+      <tuv xml:lang="en">
+        <seg>FWD</seg>
+      </tuv>
+    </tu>
+    <tu tuid="35">
+      <tuv xml:lang="en">
+        <seg>BACK</seg>
+      </tuv>
+    </tu>
+    <tu tuid="36">
+      <tuv xml:lang="en">
+        <seg>STOPPED</seg>
+      </tuv>
+    </tu>
+    <tu tuid="37">
+      <tuv xml:lang="en">
+        <seg>Acceleration</seg>
+      </tuv>
+    </tu>
+    <tu tuid="38">
+      <tuv xml:lang="en">
+        <seg>Deceleration</seg>
+      </tuv>
+    </tu>
+    <tu tuid="39">
+      <tuv xml:lang="en">
+        <seg>Print Mark Detection Sensor</seg>
+      </tuv>
+    </tu>
+    <tu tuid="40">
+      <tuv xml:lang="en">
+        <seg>Cut Detection Sensor</seg>
+      </tuv>
+    </tu>
+    <tu tuid="41">
+      <tuv xml:lang="en">
+        <seg>Conveyor</seg>
+      </tuv>
+    </tu>
+    <tu tuid="42">
+      <tuv xml:lang="en">
+        <seg>Cutter</seg>
+      </tuv>
+    </tu>
+    <tu tuid="43">
+      <tuv xml:lang="en">
+        <seg>Current Mode</seg>
+      </tuv>
+    </tu>
+    <tu tuid="44" />
+    <tu tuid="45" />
+    <tu tuid="46" />
+    <tu tuid="47" />
+    <tu tuid="48" />
+    <tu tuid="49" />
+    <tu tuid="50" />
+    <tu tuid="51" />
+    <tu tuid="52">
+      <tuv xml:lang="fr">
+        <seg>52</seg>
+      </tuv>
+    </tu>
+    <tu tuid="53" />
+    <tu tuid="54" />
+    <tu tuid="55" />
+    <tu tuid="56" />
+    <tu tuid="57" />
+    <tu tuid="58" />
   </body>
 </tmx>

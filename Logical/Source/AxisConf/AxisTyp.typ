@@ -55,6 +55,7 @@ TYPE
 		Simulate : BOOL; (*Enables motor simulation*) (* *) (*#CMD#OPT#;*)
 		TorqueLimit : BOOL; (*Enables torque limiting*) (* *) (*#CMD#OPT#;*)
 		ReleaseBrake : BOOL; (*Locks or unlocks the holding brake (only when the axis is switched off)*) (* *) (*#CMD#OPT#;*)
+		Enable : BOOL;
 	END_STRUCT;
 	AxisBasicOut_type : 	STRUCT  (*Axis OutPut Structure*)
 		Active : BOOL; (*Indicates whether the function block is active*) (* *) (*#PAR#;*)
@@ -94,6 +95,7 @@ TYPE
 		AutoMode : BOOL;
 		JogFwd : BOOL;
 		JogBack : BOOL;
+		Home : BOOL;
 	END_STRUCT;
 	AxisPara_typ : 	STRUCT 
 		Speed : UINT;

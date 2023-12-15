@@ -1,4 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Content id="ManualContent" height="540" width="1079" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2">
-  <Widgets></Widgets>
+<Content id="ManualContent" height="620" width="1130" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="40" left="468" width="328" height="96" zIndex="0" backColor="rgba(255, 255, 255, 0)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle2" top="172" left="468" width="656" height="176" zIndex="1" backColor="rgba(255, 255, 255, 0)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle4" top="40" left="796" width="328" height="96" zIndex="2" backColor="rgba(255, 255, 255, 0)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle7" top="4" left="468" width="328" height="36" zIndex="3" backColor="rgba(211, 211, 211, 1)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle8" top="4" left="796" width="328" height="36" zIndex="4" backColor="rgba(211, 211, 211, 1)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="8" left="544" width="132" zIndex="5" text="$IAT/Main/9" textAlign="center" fontSize="18px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label2" top="8" left="880" width="156" zIndex="6" text="$IAT/Main/10" textAlign="center" fontSize="18px" bold="true" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="btnCutStart" top="48" left="492" width="116" height="72" zIndex="7" image="Media/SymbolLib/Symbols/Start.svg" imageAlign="top" text="$IAT/Main/33" imageHeight="45" imageWidth="45" cornerRadius="10px" textAlign="center" fontSize="15px" bold="true" checkedBackColor="rgba(255, 224, 192, 1)" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="btnConStart" top="48" left="832" width="116" height="72" zIndex="8" image="Media/SymbolLib/Symbols/Start.svg" imageAlign="top" text="$IAT/Main/33" imageHeight="45" imageWidth="45" cornerRadius="10px" textAlign="center" fontSize="15px" bold="true" checkedBackColor="rgba(255, 224, 192, 1)" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="btnCutPower" top="48" left="652" width="116" height="72" zIndex="9" image="Media/SymbolLib/Symbols/On.svg" imageAlign="top" text="$IAT/Main/32" imageHeight="45" imageWidth="45" cornerRadius="10px" textAlign="center" fontSize="15px" bold="true" checkedBackColor="rgba(255, 224, 192, 1)" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="btnConPower" top="48" left="988" width="116" height="72" zIndex="10" image="Media/SymbolLib/Symbols/On.svg" imageAlign="top" text="$IAT/Main/32" imageHeight="45" imageWidth="45" cornerRadius="10px" textAlign="center" fontSize="15px" bold="true" checkedBackColor="rgba(255, 224, 192, 1)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle9" top="136" left="468" width="328" height="36" zIndex="11" backColor="rgba(211, 211, 211, 1)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle10" top="136" left="796" width="328" height="36" zIndex="12" backColor="rgba(211, 211, 211, 1)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label3" top="140" left="544" width="132" zIndex="13" text="$IAT/Main/31" textAlign="center" fontSize="18px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label4" top="140" left="880" width="156" zIndex="14" text="$IAT/Main/31" textAlign="center" fontSize="18px" bold="true" />
+    <Widget xsi:type="widgets.brease.ButtonBar" id="ButtonBar1" top="172" left="484" width="136" height="168" zIndex="15">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.ToggleButton" id="btnCutJogBack" top="88" left="8" width="116" height="72" zIndex="0" image="Media/SymbolLib/Arrow/Down2.svg" imageAlign="top" text="$IAT/Main/35" imageHeight="45" imageWidth="45" cornerRadius="10px" textAlign="center" fontSize="15px" bold="true" checkedBackColor="rgba(255, 224, 192, 1)" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="btnCutJogFwd" top="8" left="8" width="116" height="72" zIndex="1" image="Media/SymbolLib/Arrow/Up2.svg" imageAlign="top" text="$IAT/Main/34" imageHeight="45" imageWidth="45" cornerRadius="10px" textAlign="center" fontSize="15px" bold="true" checkedBackColor="rgba(255, 224, 192, 1)" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.ButtonBar" id="ButtonBar2" top="172" left="824" width="136" height="168" zIndex="16">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.ToggleButton" id="btnConJogFwd" top="8" left="8" width="116" height="72" zIndex="0" image="Media/SymbolLib/Arrow/ArrowUp.svg" imageAlign="top" text="$IAT/Main/34" imageHeight="45" imageWidth="45" cornerRadius="10px" textAlign="center" fontSize="15px" bold="true" checkedBackColor="rgba(255, 224, 192, 1)" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="btnConJogBack" top="89" left="8" width="116" height="72" zIndex="1" image="Media/SymbolLib/Arrow/ArrowDown.svg" imageAlign="top" text="$IAT/Main/35" imageHeight="45" imageWidth="45" cornerRadius="10px" textAlign="center" fontSize="15px" bold="true" checkedBackColor="rgba(255, 224, 192, 1)" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.NumericOutput" id="outCutSpeed" top="272" left="668" height="52" zIndex="17" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" maxValue="10000" unit="{'metric':'E96','imperial':'E96','imperial-us':'E96'}" unitAlign="right" unitTextAlign="right" cornerRadius="5px" textAlign="center" fontSize="17px" unitFontSize="11px" italic="false" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="outConvSpeed" top="272" left="1000" height="52" zIndex="18" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" maxValue="10000" unit="{'metric':'http://www.br-automation.com/units|EU1','imperial':'http://www.br-automation.com/units|EU1','imperial-us':'http://www.br-automation.com/units|EU1'}" unitAlign="right" unitTextAlign="right" cornerRadius="5px" textAlign="center" fontSize="17px" unitFontSize="11px" italic="false" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle3" top="380" left="468" width="328" height="236" zIndex="19" backColor="rgba(255, 255, 255, 0)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle5" top="380" left="796" width="328" height="236" zIndex="20" backColor="rgba(255, 255, 255, 0)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle11" top="344" left="468" width="328" height="36" zIndex="21" backColor="rgba(211, 211, 211, 1)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle12" top="344" left="796" width="328" height="36" zIndex="22" backColor="rgba(211, 211, 211, 1)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label5" top="348" left="544" width="132" zIndex="23" text="$IAT/Main/9" textAlign="center" fontSize="18px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label6" top="348" left="880" width="156" zIndex="24" text="$IAT/Main/10" textAlign="center" fontSize="18px" bold="true" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="setCutSpeed" top="388" left="668" height="52" zIndex="25" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" maxValue="10000" unit="{'metric':'E96','imperial':'E96','imperial-us':'E96'}" unitAlign="right" unitTextAlign="right" cornerRadius="5px" textAlign="center" fontSize="17px" unitFontSize="11px" italic="false" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="setConvSpeed" top="388" left="1004" height="52" zIndex="26" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" maxValue="10000" unit="{'metric':'http://www.br-automation.com/units|EU1','imperial':'http://www.br-automation.com/units|EU1','imperial-us':'http://www.br-automation.com/units|EU1'}" unitAlign="right" unitTextAlign="right" cornerRadius="5px" textAlign="center" fontSize="17px" unitFontSize="11px" italic="false" />
+  </Widgets>
 </Content>

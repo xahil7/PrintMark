@@ -1,3 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?>
-<OpcUaSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" FileVersion="4">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaSource FileVersion="9" ArVersion="G4.93">
+  <Aliases>
+    <ACLAliases />
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView>
+    <Module Name="&lt;Default&gt;">
+      <GlobalVariables Name="Global Variables">
+        <Variable Name="gAx_Master">
+          <Variable Name="Out">
+            <Variable Name="Error" />
+            <Variable Name="PowerOn" />
+            <Variable Name="IsHomed" />
+            <Variable Name="MoveActive" />
+            <Variable Name="Info">
+              <Variable Name="DigitalInputsStatus">
+                <Variable Name="Trigger2" />
+              </Variable>
+            </Variable>
+          </Variable>
+        </Variable>
+        <Variable Name="gAx_Slave">
+          <Variable Name="Out">
+            <Variable Name="Error" />
+            <Variable Name="PowerOn" />
+            <Variable Name="IsHomed" />
+            <Variable Name="Position" />
+          </Variable>
+        </Variable>
+      </GlobalVariables>
+      <Task Name="AutoCtrl">
+        <Variable Name="pRegCapture">
+          <Variable Name="ValidRMs" />
+          <Variable Name="ProductsWithoutRM" />
+          <Variable Name="AdditionalInfo">
+            <Variable Name="ActLength" />
+            <Variable Name="AverageProductLength" />
+          </Variable>
+        </Variable>
+        <Variable Name="pConvCtrl">
+          <Variable Name="Cmd">
+            <Variable Name="PrintMark" />
+          </Variable>
+        </Variable>
+        <Variable Name="pAx_CamSeq">
+          <Variable Name="Out">
+            <Variable Name="InSync" />
+          </Variable>
+        </Variable>
+        <Variable Name="iMI_AvgBagLen" />
+        <Variable Name="iMI_LastBagLen" />
+        <Variable Name="iAutoCtrl">
+          <Variable Name="Cmd">
+            <Variable Name="Start" />
+            <Variable Name="Stop" />
+            <Variable Name="AutoMode" />
+            <Variable Name="ChangeMode" />
+          </Variable>
+        </Variable>
+        <Variable Name="iMI_CurrentMode" />
+      </Task>
+      <Task Name="Visu">
+        <Variable Name="iMI_ConActSpeed" />
+        <Variable Name="iMI_ConSetSpeed" />
+      </Task>
+    </Module>
+  </DefaultView>
 </OpcUaSource>

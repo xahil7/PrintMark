@@ -9,7 +9,7 @@
 ACTION Mapping: 
 	//Assising inputs of Master axis to function Block
 	iFb_MpAxisBasic.MpLink       := ADR(gAxisMaster);
-	iFb_MpAxisBasic.Enable       := TRUE;
+	iFb_MpAxisBasic.Enable       := gAx_Master.In.Enable;
 	iFb_MpAxisBasic.ErrorReset   := gAx_Master.In.ErrorReset;
 	iFb_MpAxisBasic.Parameters   := ADR(gAx_Master.In.Parameters);
 	iFb_MpAxisBasic.Update       := gAx_Master.In.Update;
@@ -50,7 +50,7 @@ ACTION Mapping:
 
 	//Assising inputs of Slave axis to function Block
 	iFb_MpAxisSlave.MpLink       := ADR(gAxisSlave);
-	iFb_MpAxisSlave.Enable       := TRUE;
+	iFb_MpAxisSlave.Enable       := gAx_Slave.In.Enable;
 	iFb_MpAxisSlave.ErrorReset   := gAx_Slave.In.ErrorReset;
 	iFb_MpAxisSlave.Parameters   := ADR(gAx_Slave.In.Parameters);
 	iFb_MpAxisSlave.Update       := gAx_Slave.In.Update;

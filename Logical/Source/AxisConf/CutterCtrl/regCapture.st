@@ -1,3 +1,10 @@
+(*********************************************************************************
+ * Copyright: B&R Industrial Automation GmbH 
+ * Author:    kasliwals 
+ * Created:   December 16, 2023/11:41 PM 
+* Description: Reg Capture implementation
+* Version : 1.0.0.0 
+ *********************************************************************************)
 
 ACTION RegCapture: 
 	iFb_RegCapture.Axis := ADR(gAxis02);

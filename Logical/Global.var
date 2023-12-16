@@ -1,8 +1,20 @@
+(*********************************************************************************
+ * Copyright: B&R Industrial Automation GmbH 
+ * Author:    kasliwals 
+ * Created:   December 17, 2023/12:04 AM 
+ *********************************************************************************)
+(*Axis Variables*)
 VAR
-	gAxis01 : ACP10AXIS_typ;
-	gAxis02 : ACP10AXIS_typ;
+	gAxis01 : ACP10AXIS_typ; (*Master Axis*)
+	gAxis02 : ACP10AXIS_typ; (*Slave Axis*)
+END_VAR
+(*Axis Global structure*)
+VAR
 	gAx_Slave : AxisBasic_type; (*Slave Axis Structure*)
 	gAx_Master : AxisBasic_type; (*MAster axis Structure*)
-	gMI_ModeConfirm : BOOL;
-	gMI_MODE : BOOL;
+END_VAR
+(*HMI Variables*)
+VAR
+	gMI_ModeConfirm : BOOL; (*Mode Confirm VA*)
+	gMI_MODE : BOOL; (*Mode VA*)
 END_VAR

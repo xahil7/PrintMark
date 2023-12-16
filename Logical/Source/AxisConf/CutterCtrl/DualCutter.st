@@ -1,3 +1,10 @@
+(*********************************************************************************
+ * Copyright: B&R Industrial Automation GmbH 
+ * Author:    kasliwals 
+ * Created:   December 16, 2023/11:41 PM 
+* Description: Dual Cutter Homing Logic and jog limits
+* Version : 1.0.0.0 
+ *********************************************************************************)
 
 ACTION DualCutter: 
 	CASE SlaveStateDual OF 

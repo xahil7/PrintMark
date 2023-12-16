@@ -1,18 +1,23 @@
+(*********************************************************************************
+ * Copyright: B&R Industrial Automation GmbH 
+ * Author:    kasliwals 
+ * Created:   December 16, 2023/11:58 PM 
+ *********************************************************************************)
+
+(*HMI Variables*)
 VAR
-	iMI_ConSetSpeed : REAL := 120;
-	iMI_ConActSpeed : REAL;
+	iMI_ConSetSpeed : REAL := 120; (*Conv Set Speed*)
+	iMI_ConActSpeed : REAL; (*Conv act speed*)
+	iMI_ConSetJogAcc : REAL := 300; (*Conv Set jog speed*)
+	iMI_ConSetJogDeacc : REAL := 300; (*Conv set jog deaccleration*)
+	iMI_ConSetJogVel : REAL := 60; (*Conv Set jog acceleration*)
+	iMI_CutSetJogAcc : REAL := 300; (*Cut set jog acceleration*)
+	iMI_CutSetJogDeacc : REAL := 300; (*Cut jog deacceleration*)
+	iMI_CutActSpeed : REAL; (*Cut act speed*)
+	iMI_CutSetJogVel : REAL := 10; (*Cut set jog velocity*)
 END_VAR
+(*CONSTANTS*)
 VAR CONSTANT
-	PRODUCT_LENGTH : REAL := 700.0;
-	PER_SEC : REAL := 60.0;
-END_VAR
-VAR
-	iVA_ConActSpeed : REAL;
-	iMI_ConSetJogAcc : REAL := 300;
-	iMI_ConSetJogDeacc : REAL := 300;
-	iMI_ConSetJogVel : REAL := 60;
-	iMI_CutSetJogAcc : REAL := 300;
-	iMI_CutSetJogDeacc : REAL := 300;
-	iMI_CutSetJogVel : REAL := 10;
-	iMI_CutActSpeed : REAL;
+	PRODUCT_LENGTH : REAL := 700.0; (*Product length*)
+	PER_SEC : REAL := 60.0; (*Per Sec*)
 END_VAR

@@ -79,6 +79,7 @@
             <Variable Name="JogBack" />
           </Variable>
         </Variable>
+        <Variable Name="iMI_MachineStatus" />
       </Task>
       <Task Name="Visu">
         <Variable Name="iMI_ConActSpeed" />

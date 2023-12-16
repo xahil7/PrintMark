@@ -1,13 +1,18 @@
+(*********************************************************************************
+ * Copyright: B&R Industrial Automation GmbH 
+ * Author:    kasliwals 
+ * Created:   December 16, 2023/11:45 PM 
+ *********************************************************************************)
+(*Process Variables*)
 VAR
-	MasterStep : MasterAxisState_enum;
-	iConvCtrl : AxisCtrl_typ;
-	iVa_RecPrintPosition : LREAL;
+	MasterStep : MasterAxisState_enum; (*Master state Variables*)
+	iConvCtrl : AxisCtrl_typ; (*Conv Ctrl Structure*)
+	iVa_SetMasterInputs : MC_BR_SetHardwareInputs; (*Set hardware FB*)
+	iVa_RecPrintPosition : LREAL; (*Rec Print Pos Variable*)
 END_VAR
+(*Constants*)
 VAR CONSTANT
-	PRINT_MARK_LIMIT : LREAL := 300;
-	MM_TO_UDINT : LREAL := 0.0;
-	K_ZERO : LREAL := 0.0;
-END_VAR
-VAR
-	iVa_SetMasterInputs : MC_BR_SetHardwareInputs;
+	PRINT_MARK_LIMIT : LREAL := 300; (*Print maark limit*)
+	MM_TO_UDINT : LREAL := 0.0; (*MM to udint conversion*)
+	K_ZERO : LREAL := 0.0; (*Zero number*)
 END_VAR

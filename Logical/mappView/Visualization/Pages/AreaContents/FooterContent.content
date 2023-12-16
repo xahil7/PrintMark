@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="FooterContent" height="85" width="1130" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.AlarmLine" id="AlarmLine1" top="12" left="64" width="948" height="60" zIndex="0">
+    <Widget xsi:type="widgets.brease.AlarmLine" id="AlarmLine1" top="12" left="4" width="548" height="60" zIndex="0">
       <Widgets>
-        <Widget xsi:type="widgets.brease.AlarmLineItem" id="Name" width="300" zIndex="0" columnType="name" />
-        <Widget xsi:type="widgets.brease.AlarmLineItem" id="Messge" width="316" zIndex="1" />
-        <Widget xsi:type="widgets.brease.AlarmLineItem" id="Time" width="316" zIndex="2" columnType="timestamp" />
+        <Widget xsi:type="widgets.brease.AlarmLineItem" id="Name" width="152" zIndex="0" columnType="name" />
+        <Widget xsi:type="widgets.brease.AlarmLineItem" id="Messge" width="212" zIndex="1" />
+        <Widget xsi:type="widgets.brease.AlarmLineItem" id="Time" width="176" zIndex="2" columnType="timestamp" />
       </Widgets>
     </Widget>
+    <Widget xsi:type="widgets.brease.TextOutput" id="outMachineStatus" top="14" left="628" width="488" height="56" zIndex="1" multiLine="true" wordWrap="true" backColor="rgba(255, 224, 192, 1)" textAlign="left" fontSize="15px" bold="true" />
   </Widgets>
 </Content>

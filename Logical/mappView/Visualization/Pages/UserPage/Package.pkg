@@ -3,6 +3,6 @@
 <Package SubType="PagePackage" PackageType="PagePackage" xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
     <Object Type="File" Description="Page description">User.page</Object>
-    <Object Type="File">UserContent.content</Object>
+    <Object Type="File" Description="User Content">UserContent.content</Object>
   </Objects>
 </Package>

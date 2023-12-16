@@ -1,3 +1,10 @@
+(*********************************************************************************
+ * Copyright: B&R Industrial Automation GmbH 
+ * Author:    kasliwals 
+ * Created:   December 16, 2023/11:40 PM 
+* Description: Single Cutter Homingb Logic and jog Limits
+* Version : 1.0.0.0 
+ *********************************************************************************)
 
 ACTION  SingleCutter : 
 	CASE SlaveStateSingle OF 

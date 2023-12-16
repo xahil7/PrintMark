@@ -2,28 +2,30 @@
 <?AutomationStudio FileVersion="4.9"?>
 <SwConfiguration CpuAddress="SL1" xmlns="http://br-automation.co.at/AS/SwConfiguration">
   <TaskClass Name="Cyclic#1">
-    <Task Name="AutoCtrl" Source="Source.AutoCtrl.AutoCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="ConvCtrl" Source="Source.AxisConf.ConvCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="CutterCtrl" Source="Source.AxisConf.CutterCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="AutoCtrl" Source="Source.AutoCtrl.AutoCtrl.prg" Memory="UserROM" Description="Auto Ctrl Logic" Language="IEC" Debugging="true" />
+    <Task Name="ConvCtrl" Source="Source.AxisConf.ConvCtrl.prg" Memory="UserROM" Description="Conv Ctrl Logic" Language="IEC" Debugging="true" />
+    <Task Name="CutterCtrl" Source="Source.AxisConf.CutterCtrl.prg" Memory="UserROM" Description="Cutter Ctrl Logic" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#2" />
   <TaskClass Name="Cyclic#3" />
-  <TaskClass Name="Cyclic#4" />
-  <TaskClass Name="Cyclic#5" />
-  <TaskClass Name="Cyclic#6">
-    <Task Name="Visu" Source="InfraStructure.Visu.Visu.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+  <TaskClass Name="Cyclic#4">
+    <Task Name="Alarm" Source="InfraStructure.Alarm.Alarm.prg" Memory="UserROM" Description="Alarm Logic" Language="IEC" Debugging="true" />
   </TaskClass>
-  <TaskClass Name="Cyclic#7" />
+  <TaskClass Name="Cyclic#5" />
+  <TaskClass Name="Cyclic#6" />
+  <TaskClass Name="Cyclic#7">
+    <Task Name="Visu" Source="InfraStructure.Visu.Visu.prg" Memory="UserROM" Description="Visu Logic" Language="IEC" Debugging="true" />
+  </TaskClass>
   <TaskClass Name="Cyclic#8" />
   <DataObjects>
     <DataObject Name="Acp10sys" Source="" Memory="UserROM" Language="Binary" />
   </DataObjects>
   <NcDataObjects>
-    <NcDataObject Name="acp10etxen" Source="Axis.acp10etxen.dob" Memory="UserROM" Language="Ett" />
-    <NcDataObject Name="gAxis01a" Source="Axis.gAxis01obj.gAxis01a.dob" Memory="UserROM" Language="Apt" />
-    <NcDataObject Name="gAxis01i" Source="Axis.gAxis01obj.gAxis01i.dob" Memory="UserROM" Language="Ax" />
-    <NcDataObject Name="gAxis02a" Source="Axis.gAxis02obj.gAxis02a.dob" Memory="UserROM" Language="Apt" />
-    <NcDataObject Name="gAxis02i" Source="Axis.gAxis02obj.gAxis02i.dob" Memory="UserROM" Language="Ax" />
+    <NcDataObject Name="acp10etxen" Source="Axis.acp10etxen.dob" Memory="UserROM" Description="Acp 10 " Language="Ett" />
+    <NcDataObject Name="gAxis01a" Source="Axis.gAxis01obj.gAxis01a.dob" Memory="UserROM" Description="Master axis apt" Language="Apt" />
+    <NcDataObject Name="gAxis01i" Source="Axis.gAxis01obj.gAxis01i.dob" Memory="UserROM" Description="Maste axis init para" Language="Ax" />
+    <NcDataObject Name="gAxis02a" Source="Axis.gAxis02obj.gAxis02a.dob" Memory="UserROM" Description="Slave axis apt" Language="Apt" />
+    <NcDataObject Name="gAxis02i" Source="Axis.gAxis02obj.gAxis02i.dob" Memory="UserROM" Description="Slave axis Intit para" Language="Ax" />
   </NcDataObjects>
   <Binaries>
     <BinaryObject Name="arsvcreg" Source="" Memory="UserROM" Language="Binary" />

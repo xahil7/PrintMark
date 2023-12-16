@@ -33,22 +33,6 @@ END_PROGRAM
 PROGRAM _CYCLIC
 	
 	
-//	IF iVa_LastValidPM <> iFb_RegCapture.ValidRMs AND iFb_RegCapture.ValidRMs <> 0 THEN
-//		IF iVa_LastValidPM = 1 THEN
-//			iAx_CamSeq.In.Signal1 := FALSE;
-//		ELSE
-//			iAx_CamSeq.In.Signal1 := TRUE;
-//		END_IF
-//		
-//		iVa_LastValidPM := iFb_RegCapture.ValidRMs;
-//		
-//	END_IF
-//	
-//	IF iAx_CamSeq.Out.ActStIndex = 1 THEN
-//		iAx_CamSeq.In.Signal1 := FALSE;
-//	END_IF
-//	
-	
 	SingleCam;
 	RegCapture;
 	SingleCutter;

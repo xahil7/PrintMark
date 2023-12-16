@@ -1,3 +1,10 @@
+(*********************************************************************************
+ * Copyright: B&R Industrial Automation GmbH 
+ * Author:    kasliwals 
+ * Created:   December 16, 2023/11:41 PM 
+* Description: Cam Automat for Single Cutter and Dual Cutter
+* Version : 1.0.0.0 
+ *********************************************************************************)
 
 ACTION SingleCam: 
 	iAx_CamSeq.In.Parameters.Configuration.Master := ADR(gAxis01); // Not Mplink Axis Address 

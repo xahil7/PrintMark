@@ -17,6 +17,7 @@
     <BindingsSet refId="PopUpContent_binding" />
     <BindingsSet refId="ManualContent_binding" />
     <BindingsSet refId="binding_0" />
+    <BindingsSet refId="FooterContent_binding" />
   </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="AlarmContent_eventbinding" />

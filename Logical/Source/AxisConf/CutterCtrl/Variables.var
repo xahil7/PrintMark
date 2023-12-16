@@ -6,34 +6,36 @@
 (*Function Blocks*)
 VAR
 	iFb_MpAxisSlave : MpAxisBasic; (*MpAxis Function Block*)
-	iFb_CamSeq : MpAxisCamSequencer;
+	iFb_RegCapture : MC_BR_RegMarkCapture002; (*Reg Capture FB*)
+	iFb_CamSeq : MpAxisCamSequencer; (*Cam Seq FB*)
 	iFb_MpAxisBasic : MpAxisBasic; (*MpAxis Function Block*)
 END_VAR
 (*Axis Structures*)
 VAR
-	iAx_CamSeq : AxisCamSeqMain_Typ;
-	SlaveStateSingle : AxisState_enum;
-	SlaveStateDual : AxisState_enum;
-	iCutterCtrl : AxisCtrl_typ;
+	iAx_CamSeq : AxisCamSeqMain_Typ; (*Cam Seq Structure*)
+	iCutterCtrl : AxisCtrl_typ; (*Cutter Ctrl Structure*)
 END_VAR
 (*CONSTANTS*)
 VAR CONSTANT
-	LOWER_CUT_POS : LREAL := 2653;
-	UPPER_CUT_POS : LREAL := 3013;
-	LOWER_BUFER : LREAL := 2643;
-	UPPER_BUFFER : LREAL := 3014;
+	LOWER_CUT_POS : LREAL := 2653; (*Lower Limit of Cutting zone*)
+	HOMING_OFFSET : LREAL := 1033; (*Homing Position*)
+	UPPER_CUT_POS : LREAL := 3013; (*upper Limit of cutting zone*)
+	START_VEL : REAL := 150; (*Start Velecity*)
+	HOMING_VEL : REAL := 300; (*Homing Velocity*)
 END_VAR
 VAR
-	iFb_RegCapture : MC_BR_RegMarkCapture002;
-	iVa_RegCaptureAdvPara : MC_BR_ADV_RM2_REF;
-	iVa_RegCaptureConfig : MC_BR_CFG_RM2_REF;
-	sJogState : INT;
-	LIMIT_END : LREAL := 3599;
-	ZERO : LREAL := 0;
-	iVa_LastValidPM : UDINT := 1;
+	ZERO : LREAL := 0; (*Zero number*)
+	LIMIT_END : LREAL := 3599; (*Limit ENd*)
 END_VAR
 VAR CONSTANT
-	HOMING_OFFSET : LREAL := 1033;
-	HOMING_VEL : REAL := 300;
-	START_VEL : REAL := 150;
+	LOWER_BUFER : LREAL := 2643; (*Lower Limit buffer*)
+	UPPER_BUFFER : LREAL := 3014; (*Upper Limit buffer*)
+END_VAR
+(*Process Variables And Structures*)
+VAR
+	iVa_RegCaptureAdvPara : MC_BR_ADV_RM2_REF; (*Adv para for reg capture*)
+	SlaveStateDual : AxisState_enum; (*Dual Cutter State*)
+	SlaveStateSingle : AxisState_enum; (*Single Cutter State*)
+	iVa_RegCaptureConfig : MC_BR_CFG_RM2_REF; (*Config Para for reg caoture*)
+	sJogState : INT; (*Jog State*)
 END_VAR

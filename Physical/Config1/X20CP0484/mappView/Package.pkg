@@ -15,5 +15,6 @@
     <Object Type="File">ManualContent.binding</Object>
     <Object Type="File">ManualContent.eventbinding</Object>
     <Object Type="File">SettingConten.binding</Object>
+    <Object Type="File">FooterContent.binding</Object>
   </Objects>
 </Package>

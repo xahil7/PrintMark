@@ -3,6 +3,6 @@
 <Package SubType="PagePackage" PackageType="PagePackage" xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
     <Object Type="File" Description="Page description">Alarm.page</Object>
-    <Object Type="File">AlarmContent.content</Object>
+    <Object Type="File" Description="Alarm Content">AlarmContent.content</Object>
   </Objects>
 </Package>

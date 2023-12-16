@@ -1,0 +1,3 @@
+VAR
+	iFB_Alarm : MpAlarmXCore; (*MpAlarmXcore FB*)
+END_VAR

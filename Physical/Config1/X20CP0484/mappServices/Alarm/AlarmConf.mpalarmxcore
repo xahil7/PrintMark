@@ -1,5 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio FileVersion="4.9"?>
 <Configuration>
-  <Element ID="gAlarmXMain" Type="mpalarmxcore" />
+  <Element ID="gAlarmXMain" Type="mpalarmxcore">
+    <Group ID="mapp.AlarmX.Core.Configuration">
+      <Group ID="[0]">
+        <Property ID="Name" Value="InCuttingZone" />
+        <Property ID="Message" Value="Cutter is in Cutting Zone. Please Remove the Cutter" />
+        <Property ID="Code" Value="50" />
+        <Property ID="Severity" Value="10" />
+        <Selector ID="Behavior" Value="PersistentAlarm">
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+        </Selector>
+      </Group>
+      <Group ID="[1]">
+        <Property ID="Name" Value="CuttingError" />
+        <Property ID="Message" Value="Product without Print Mark Exceeded Limit" />
+        <Property ID="Code" Value="80" />
+        <Property ID="Severity" Value="50" />
+        <Selector ID="Behavior" Value="PersistentAlarm">
+          <Property ID="ReactionUntilAcknowledged" Value="FALSE" />
+        </Selector>
+      </Group>
+    </Group>
+  </Element>
 </Configuration>

@@ -1,3 +1,10 @@
+(*********************************************************************************
+ * Copyright: B&R Industrial Automation GmbH 
+ * Author:    kasliwals 
+ * Created:   December 16, 2023/11:35 PM 
+* Description: Auto Ctrl Logic for Print Marl
+* Version : 1.0.0.0 
+ *********************************************************************************)
 
 PROGRAM _INIT
 	(* Insert code here *)
@@ -19,6 +26,7 @@ PROGRAM _CYCLIC
 	
 	CASE AutoCtrlState OF
 		WAIT :
+			iMI_MachineStatus := 'Please Select the Mode And Then Press Start';
 			gAx_Master.In.Enable := TRUE;
 			gAx_Slave.In.Enable := TRUE;
 			
@@ -40,6 +48,7 @@ PROGRAM _CYCLIC
 				END_IF
 			END_IF
 		HOMING_DONE :
+			iMI_MachineStatus := 'Homing Both Axis';
 			pAx_CamSeq.In.ErrorReset := TRUE;
 			
 			IF gAx_Master.Out.IsHomed AND gAx_Slave.Out.IsHomed THEN
@@ -50,6 +59,7 @@ PROGRAM _CYCLIC
 		AUTO_START :
 			
 			IF pAx_CamSeq.Out.Info.MasterReady AND pAx_CamSeq.Out.Info.SlaveReady AND pAx_CamSeq.Out.StatusID = 0 THEN
+			
 				pAx_CamSeq.In.StartSequence := TRUE;
 			END_IF
 			IF pAx_CamSeq.Out.StatusID <> 0 THEN
@@ -58,14 +68,17 @@ PROGRAM _CYCLIC
 			END_IF
 			
 			IF pAx_CamSeq.Out.InSync AND iAutoCtrl.Cmd.Start THEN
+				iMI_MachineStatus := 'Running in Auto Mode';
 				gAx_Master.In.MoveVelocity := TRUE;
 			END_IF
 			
 			IF iAutoCtrl.Cmd.Stop THEN
+				iMI_MachineStatus := 'Stop Pressed. Press Start to Restart Or Change mode to Exit Mode and select mode.';
 				gAx_Master.In.MoveVelocity := FALSE;
 			END_IF
 			
 			IF iAutoCtrl.Cmd.DisableCutter THEN
+				iMI_MachineStatus := 'Cutter Disabled Pressed';
 				pAx_CamSeq.In.StartSequence := FALSE;
 				pCutterCtrl.Cmd.Start := FALSE;
 				gAx_Slave.In.Power := FALSE;
@@ -73,26 +86,34 @@ PROGRAM _CYCLIC
 			END_IF
 			
 			IF iAutoCtrl.Cmd.ChangeMode AND iAutoCtrl.Cmd.Stop THEN
+				iMI_MachineStatus := 'Machine Stopped';
 				gAx_Master.In.MoveVelocity := FALSE;
 				iAutoCtrl.Cmd.ChangeMode := FALSE;
 				pAx_CamSeq.In.StartSequence := FALSE;
 				AutoCtrlState := STOP;
 			END_IF
 		CUTTER_DISABLED_HOME :
+				iMI_MachineStatus := 'Homing Cutter';
 			gAx_Slave.In.Power := TRUE;
 			pCutterCtrl.Cmd.Start := TRUE;
 			AutoCtrlState := CUTTER_DISABLED;
 		CUTTER_DISABLED :
 			IF gAx_Slave.Out.IsHomed THEN
+				iMI_MachineStatus := 'Cutter Disbaled. Stop Mode or Restart Cutter Again';
 				gAx_Slave.In.Home := FALSE;
 			END_IF
 			IF iAutoCtrl.Cmd.Stop THEN
 				gAx_Master.In.MoveVelocity := FALSE;
 			END_IF
+			IF iAutoCtrl.Cmd.Start THEN
+				gAx_Master.In.MoveVelocity := TRUE;
+			END_IF
 			IF iAutoCtrl.Cmd.DisableCutter = FALSE THEN
+				iMI_MachineStatus := 'Cutter Enabled';
 				AutoCtrlState := AUTO_START;
 			END_IF
 			IF iAutoCtrl.Cmd.ChangeMode AND iAutoCtrl.Cmd.Stop THEN
+				iMI_MachineStatus := 'Machine Stopped';
 				gAx_Master.In.MoveVelocity := FALSE;
 				iAutoCtrl.Cmd.ChangeMode := FALSE;
 				pAx_CamSeq.In.StartSequence := FALSE;
@@ -101,12 +122,14 @@ PROGRAM _CYCLIC
 			
 		MANUAL_START :
 			IF iAutoCtrl.Cmd.Stop AND iAutoCtrl.Cmd.ChangeMode THEN
+				iMI_MachineStatus := 'Machine Stopped';
 				iAutoCtrl.ManualCmd.ConvPowerON := FALSE;
 				iAutoCtrl.ManualCmd.CutterPowerON := FALSE;
 				AutoCtrlState := STOP;
 			END_IF
 		
 		STOP :
+			iMI_MachineStatus := 'Machine Stopped';
 			iAutoCtrl.Cmd.Start := FALSE;
 			gMI_ModeConfirm := FALSE;
 			gAx_Master.In.Power := FALSE;
@@ -121,6 +144,7 @@ PROGRAM _CYCLIC
 			AutoCtrlState := WAIT;
 		
 		IN_CUTTING_ZONE :
+			iMI_MachineStatus := 'Cutter In Cutting Zone.';
 			iAutoCtrl.ManualCmd.ConvPowerON := FALSE;
 			iAutoCtrl.ManualCmd.CutterPowerON := FALSE;
 			iAutoCtrl.ManualCmd.ConvHome := FALSE;

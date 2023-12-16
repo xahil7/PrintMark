@@ -150,12 +150,19 @@ ACTION  SingleCutter :
 			IF gAx_Slave.Out.UpdateDone = TRUE THEN
 				gAx_Slave.In.Update					:= FALSE;
 			END_IF;
+			IF gAx_Slave.In.JogNegative = TRUE AND gAx_Slave.Out.Position <ZERO AND gAx_Slave.Out.Position > UPPER_CUT_POS THEN
+				sJogState	:= 10;
+			END_IF;
+			IF (gAx_Slave.In.JogPositive = TRUE) AND gAx_Slave.Out.Position > ZERO AND gAx_Slave.Out.Position < LOWER_CUT_POS  THEN
+				sJogState	:= 20;
+			END_IF;
 			IF ((gAx_Slave.Out.Position = UPPER_BUFFER) OR (gAx_Slave.Out.Position =LOWER_BUFER )) THEN
 				gAx_Slave.In.JogNegative			:= FALSE;
 				gAx_Slave.In.JogPositive			:= FALSE;
 				sJogState							:= 40;
 			END_IF;
 		40:
+	
 			gAx_Slave.In.Parameters.Jog.LowerLimit	:= ZERO;
 			gAx_Slave.In.Parameters.Jog.UpperLimit	:= ZERO;
 			gAx_Slave.In.Update					:= TRUE;

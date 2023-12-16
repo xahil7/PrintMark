@@ -21,7 +21,7 @@ PROGRAM _CYCLIC
 		WAIT :
 			gAx_Master.In.Enable := TRUE;
 			gAx_Slave.In.Enable := TRUE;
-			gMI_ModeConfirm := FALSE;
+			
 			IF iAutoCtrl.Cmd.Start THEN
 				pConvCtrl.Cmd.Start := TRUE;
 				pCutterCtrl.Cmd.Start := TRUE;
@@ -49,14 +49,27 @@ PROGRAM _CYCLIC
 			
 		AUTO_START :
 			
-			IF pAx_CamSeq.Out.Info.MasterReady AND pAx_CamSeq.Out.Info.SlaveReady THEN
+			IF pAx_CamSeq.Out.Info.MasterReady AND pAx_CamSeq.Out.Info.SlaveReady AND pAx_CamSeq.Out.StatusID = 0 THEN
 				pAx_CamSeq.In.StartSequence := TRUE;
 			END_IF
+			IF pAx_CamSeq.Out.StatusID <> 0 THEN
+				pAx_CamSeq.In.ErrorReset := TRUE;
+				pAx_CamSeq.In.ErrorReset := FALSE;
+			END_IF
+			
 			IF pAx_CamSeq.Out.InSync AND iAutoCtrl.Cmd.Start THEN
 				gAx_Master.In.MoveVelocity := TRUE;
 			END_IF
+			
 			IF iAutoCtrl.Cmd.Stop THEN
 				gAx_Master.In.MoveVelocity := FALSE;
+			END_IF
+			
+			IF iAutoCtrl.Cmd.DisableCutter THEN
+				pAx_CamSeq.In.StartSequence := FALSE;
+				pCutterCtrl.Cmd.Start := FALSE;
+				gAx_Slave.In.Power := FALSE;
+				AutoCtrlState := CUTTER_DISABLED_HOME;
 			END_IF
 			
 			IF iAutoCtrl.Cmd.ChangeMode AND iAutoCtrl.Cmd.Stop THEN
@@ -65,20 +78,46 @@ PROGRAM _CYCLIC
 				pAx_CamSeq.In.StartSequence := FALSE;
 				AutoCtrlState := STOP;
 			END_IF
+		CUTTER_DISABLED_HOME :
+			gAx_Slave.In.Power := TRUE;
+			pCutterCtrl.Cmd.Start := TRUE;
+			AutoCtrlState := CUTTER_DISABLED;
+		CUTTER_DISABLED :
+			IF gAx_Slave.Out.IsHomed THEN
+				gAx_Slave.In.Home := FALSE;
+			END_IF
+			IF iAutoCtrl.Cmd.Stop THEN
+				gAx_Master.In.MoveVelocity := FALSE;
+			END_IF
+			IF iAutoCtrl.Cmd.DisableCutter = FALSE THEN
+				AutoCtrlState := AUTO_START;
+			END_IF
+			IF iAutoCtrl.Cmd.ChangeMode AND iAutoCtrl.Cmd.Stop THEN
+				gAx_Master.In.MoveVelocity := FALSE;
+				iAutoCtrl.Cmd.ChangeMode := FALSE;
+				pAx_CamSeq.In.StartSequence := FALSE;
+				AutoCtrlState := STOP;
+			END_IF
 			
 		MANUAL_START :
-			IF NOT iAutoCtrl.ManualCmd.ConvPowerON AND NOT iAutoCtrl.ManualCmd.CutterPowerON AND iAutoCtrl.Cmd.ChangeMode THEN
+			IF iAutoCtrl.Cmd.Stop AND iAutoCtrl.Cmd.ChangeMode THEN
+				iAutoCtrl.ManualCmd.ConvPowerON := FALSE;
+				iAutoCtrl.ManualCmd.CutterPowerON := FALSE;
 				AutoCtrlState := STOP;
 			END_IF
 		
 		STOP :
 			iAutoCtrl.Cmd.Start := FALSE;
+			gMI_ModeConfirm := FALSE;
 			gAx_Master.In.Power := FALSE;
 			gAx_Slave.In.Power := FALSE;
 			gAx_Master.In.Enable := FALSE;
 			gAx_Slave.In.Enable := FALSE;
 			pConvCtrl.Cmd.Start := FALSE;
+			iAutoCtrl.Cmd.ChangeMode := FALSE;
 			pCutterCtrl.Cmd.Start := FALSE;
+			iAutoCtrl.Cmd.DisableCutter := FALSE;
+			iAutoCtrl.Cmd.Stop := FALSE;
 			AutoCtrlState := WAIT;
 		
 		IN_CUTTING_ZONE :
@@ -95,8 +134,6 @@ PROGRAM _CYCLIC
 	IF NOT iAutoCtrl.Cmd.AutoMode THEN 
 		gAx_Master.In.Power := iAutoCtrl.ManualCmd.ConvPowerON;
 		gAx_Slave.In.Power := iAutoCtrl.ManualCmd.CutterPowerON;
-		gAx_Master.In.Home := iAutoCtrl.ManualCmd.ConvHome;
-		gAx_Slave.In.Home := iAutoCtrl.ManualCmd.CutterHome;
 		gAx_Master.In.JogNegative := pConvCtrl.Cmd.JogBack;
 		gAx_Master.In.JogPositive := pConvCtrl.Cmd.JogFwd;
 		gAx_Slave.In.JogNegative := pCutterCtrl.Cmd.JogBack;
@@ -113,6 +150,14 @@ PROGRAM _CYCLIC
 	
 	iMI_LastBagLen := pRegCapture.AdditionalInfo.ActLength / TEN;
 	iMI_AvgBagLen := pRegCapture.AdditionalInfo.AverageProductLength /TEN;
+	IF iAutoCtrl.Cmd.AutoMode THEN
+		iMI_CurrentMode := 'Auto Mode';
+		
+	ELSE
+		iMI_CurrentMode := 'Manual Mode';
+	END_IF
+	
+	gMI_MODE := iAutoCtrl.Cmd.AutoMode;
 	
 END_PROGRAM
 

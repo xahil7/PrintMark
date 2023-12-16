@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="SettingContent" height="620" width="1130" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle7" top="4" left="237" width="328" height="36" zIndex="0" backColor="rgba(211, 211, 211, 1)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle8" top="4" left="565" width="328" height="36" zIndex="1" backColor="rgba(211, 211, 211, 1)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="8" left="313" width="132" zIndex="2" text="$IAT/Main/9" textAlign="center" fontSize="18px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label2" top="8" left="649" width="156" zIndex="3" text="$IAT/Main/10" textAlign="center" fontSize="18px" bold="true" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle3" top="76" left="237" width="328" height="236" zIndex="4" backColor="rgba(255, 255, 255, 0)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle5" top="76" left="565" width="328" height="236" zIndex="5" backColor="rgba(255, 255, 255, 0)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle11" top="40" left="237" width="328" height="36" zIndex="6" backColor="rgba(211, 211, 211, 1)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle12" top="40" left="565" width="328" height="36" zIndex="7" backColor="rgba(211, 211, 211, 1)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label5" top="44" left="313" width="132" zIndex="8" text="$IAT/Main/51" textAlign="center" fontSize="18px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label6" top="44" left="649" width="156" zIndex="9" text="$IAT/Main/51" textAlign="center" fontSize="18px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label15" top="173" left="257" width="116" zIndex="10" text="$IAT/Main/37" fontSize="17px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label16" top="96" left="257" width="116" zIndex="11" text="$IAT/Main/20" fontSize="17px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label18" top="96" left="597" width="116" zIndex="12" text="$IAT/Main/20" fontSize="17px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label19" top="251" left="257" width="116" zIndex="13" text="$IAT/Main/38" fontSize="17px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label17" top="173" left="597" width="116" zIndex="14" text="$IAT/Main/37" fontSize="17px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label20" top="251" left="601" width="116" zIndex="15" text="$IAT/Main/38" fontSize="17px" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="85" left="405" height="52" zIndex="16" unit="{'metric':'http://www.br-automation.com/units|EU1','imperial':'http://www.br-automation.com/units|EU1','imperial-us':'http://www.br-automation.com/units|EU1'}" unitAlign="right" cornerRadius="10px" backColor="rgba(255, 224, 192, 1)" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput2" top="240" left="405" height="52" zIndex="17" cornerRadius="10px" backColor="rgba(255, 224, 192, 1)" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput3" top="162" left="405" height="52" zIndex="18" cornerRadius="10px" backColor="rgba(255, 224, 192, 1)" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput4" top="162" left="725" height="52" zIndex="19" cornerRadius="10px" backColor="rgba(255, 224, 192, 1)" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput5" top="85" left="725" height="52" zIndex="20" unit="{'metric':'http://www.br-automation.com/units|EU1','imperial':'http://www.br-automation.com/units|EU1','imperial-us':'http://www.br-automation.com/units|EU1'}" unitAlign="right" cornerRadius="10px" backColor="rgba(255, 224, 192, 1)" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput6" top="240" left="725" height="52" zIndex="21" cornerRadius="10px" backColor="rgba(255, 224, 192, 1)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label7" top="251" left="505" width="64" zIndex="22" text="PPM/s^2" textAlign="center" fontSize="10px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label8" top="173" left="825" width="64" zIndex="23" text="PPM/s^2" textAlign="center" fontSize="10px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label9" top="173" left="505" width="64" zIndex="24" text="PPM/s^2" textAlign="center" fontSize="10px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label10" top="251" left="825" width="64" zIndex="25" text="PPM/s^2" textAlign="center" fontSize="10px" bold="true" />
+  </Widgets>
+</Content>

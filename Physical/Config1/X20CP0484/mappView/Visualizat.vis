@@ -7,18 +7,28 @@
     <Page refId="UserPage" />
     <Page refId="ManualPage" />
     <Page refId="ServicePage" />
+    <Page refId="SettingsPage" />
   </Pages>
   <Navigations />
   <BindingsSets>
     <BindingsSet refId="AlarmContent_binding" />
     <BindingsSet refId="HomeContent_binding" />
     <BindingsSet refId="HeaderContent_binding" />
+    <BindingsSet refId="PopUpContent_binding" />
+    <BindingsSet refId="ManualContent_binding" />
+    <BindingsSet refId="binding_0" />
   </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="AlarmContent_eventbinding" />
     <EventBindingsSet refId="UserContent_eventbinding" />
+    <EventBindingsSet refId="PopUpContent_eventbinding" />
+    <EventBindingsSet refId="HomeContent_eventbinding" />
+    <EventBindingsSet refId="eventbinding_0" />
   </EventBindingsSets>
-  <Dialogs />
+  <Dialogs>
+    <Dialog refId="Animation" />
+    <Dialog refId="PopUpd" />
+  </Dialogs>
   <Contents>
     <Content refId="HomeContent" />
     <Content refId="NavigationContent" />
@@ -28,6 +38,9 @@
     <Content refId="UserContent" />
     <Content refId="ManualContent" />
     <Content refId="ServiceContent" />
+    <Content refId="SingleCutterAni" />
+    <Content refId="PopUpContent" />
+    <Content refId="SettingContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

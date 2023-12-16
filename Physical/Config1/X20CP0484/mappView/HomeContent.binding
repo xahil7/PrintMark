@@ -37,27 +37,9 @@
 <Source xsi:type="opcUa" refId="::AutoCtrl:pRegCapture.ValidRMs" attribute="value" />
 <Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="outValidPM" attribute="value" />
 </Binding>
-
-
-
-
-
-<Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::AutoCtrl:pConvCtrl.Cmd.PrintMark" attribute="value" samplingRate="fast" />
-<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList9" attribute="selectedIndex" />
-</Binding>
-<Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gAx_Master.Out.Info.DigitalInputsStatus.Trigger2" attribute="value" samplingRate="fast" />
-<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList10" attribute="selectedIndex" />
-</Binding>
-
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Visu:iMI_ConSetSpeed" attribute="value" />
 <Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="inSetSpeed" attribute="value" />
-</Binding>
-<Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gAx_Slave.Out.Position" attribute="value" samplingRate="fast" />
-<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="SliderSlavePos" attribute="value" />
 </Binding>
 <Binding mode="oneWay">
 <Source xsi:type="opcUa" refId="::Visu:iMI_ConActSpeed" attribute="value" />
@@ -82,6 +64,34 @@
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.Cmd.Start" attribute="value" />
 <Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="btnStart" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.Cmd.DisableCutter" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="btnDisableCutter" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gMI_ModeConfirm" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="machineBtnBar" attribute="enable" />
+</Binding>
+
+
+
+
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gAx_Slave.Out.Position" attribute="value" samplingRate="fast" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="SliderSlavePos" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:pConvCtrl.Cmd.PrintMark" attribute="value" samplingRate="fast" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList9" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gAx_Master.Out.Info.DigitalInputsStatus.Trigger2" attribute="value" samplingRate="fast" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList10" attribute="selectedIndex" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.Cmd.ChangeMode" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="btnModeChangeBit" attribute="value" />
 </Binding>
 </Bindings>
 </BindingsSet>

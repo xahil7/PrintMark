@@ -27,9 +27,9 @@ PROGRAM _CYCLIC
 			END_IF
 		
 		HOME :
-			IF iConvCtrl.Cmd.AutoMode THEN
+		
 				gAx_Master.In.Home := TRUE;
-			END_IF
+		
 			
 			IF gAx_Master.Out.IsHomed THEN
 				gAx_Master.In.Home := FALSE;
@@ -55,7 +55,7 @@ PROGRAM _CYCLIC
 			IF iConvCtrl.Cmd.JogBack THEN
 				MasterStep := JOG_NEGATIVE;
 			END_IF
-			
+			iVa_RecPrintPosition := K_ZERO;
 			IF iConvCtrl.Cmd.Start = FALSE THEN
 				MasterStep := WAIT;
 				gAx_Master.In.Power := FALSE;

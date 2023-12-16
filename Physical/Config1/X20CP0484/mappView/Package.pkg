@@ -9,5 +9,11 @@
     <Object Type="File">AlarmContent.binding</Object>
     <Object Type="File">HomeContent.binding</Object>
     <Object Type="File">HeaderContent.binding</Object>
+    <Object Type="File">PopUpContent.binding</Object>
+    <Object Type="File">PopUpContent.eventbinding</Object>
+    <Object Type="File">HomeContent.eventbinding</Object>
+    <Object Type="File">ManualContent.binding</Object>
+    <Object Type="File">ManualContent.eventbinding</Object>
+    <Object Type="File">SettingConten.binding</Object>
   </Objects>
 </Package>

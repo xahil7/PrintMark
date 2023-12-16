@@ -8,4 +8,11 @@ VAR CONSTANT
 END_VAR
 VAR
 	iVA_ConActSpeed : REAL;
+	iMI_ConSetJogAcc : REAL := 300;
+	iMI_ConSetJogDeacc : REAL := 300;
+	iMI_ConSetJogVel : REAL := 60;
+	iMI_CutSetJogAcc : REAL := 300;
+	iMI_CutSetJogDeacc : REAL := 300;
+	iMI_CutSetJogVel : REAL := 10;
+	iMI_CutActSpeed : REAL;
 END_VAR

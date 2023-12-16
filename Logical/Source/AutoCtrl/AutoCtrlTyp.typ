@@ -5,6 +5,7 @@ TYPE
 		Stop : BOOL;
 		AutoMode : BOOL;
 		ChangeMode : BOOL;
+		DisableCutter : BOOL;
 	END_STRUCT;
 	AutoPara_typ : 	STRUCT 
 		ConvSpeed : REAL;

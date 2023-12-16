@@ -4,4 +4,5 @@ VAR
 	gAx_Slave : AxisBasic_type; (*Slave Axis Structure*)
 	gAx_Master : AxisBasic_type; (*MAster axis Structure*)
 	gMI_ModeConfirm : BOOL;
+	gMI_MODE : BOOL;
 END_VAR

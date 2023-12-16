@@ -8,5 +8,6 @@
     <Object Type="Package">UserPage</Object>
     <Object Type="Package">ManualPage</Object>
     <Object Type="Package">ServicePage</Object>
+    <Object Type="Package">Settings</Object>
   </Objects>
 </Package>

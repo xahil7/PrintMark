@@ -226,20 +226,59 @@
         <seg>Current Mode</seg>
       </tuv>
     </tu>
-    <tu tuid="44" />
-    <tu tuid="45" />
-    <tu tuid="46" />
-    <tu tuid="47" />
-    <tu tuid="48" />
-    <tu tuid="49" />
-    <tu tuid="50" />
-    <tu tuid="51" />
+    <tu tuid="44">
+      <tuv xml:lang="en">
+        <seg>Select Mode</seg>
+      </tuv>
+    </tu>
+    <tu tuid="45">
+      <tuv xml:lang="en">
+        <seg>Disable Cutter</seg>
+      </tuv>
+    </tu>
+    <tu tuid="46">
+      <tuv xml:lang="en">
+        <seg>Automatic</seg>
+      </tuv>
+    </tu>
+    <tu tuid="47">
+      <tuv xml:lang="en">
+        <seg>Manual</seg>
+      </tuv>
+    </tu>
+    <tu tuid="48">
+      <tuv xml:lang="en">
+        <seg>Confirm Mode</seg>
+      </tuv>
+    </tu>
+    <tu tuid="49">
+      <tuv xml:lang="en">
+        <seg>Click To View Animation</seg>
+      </tuv>
+    </tu>
+    <tu tuid="50">
+      <tuv xml:lang="en">
+        <seg>Single Cutter</seg>
+      </tuv>
+    </tu>
+    <tu tuid="51">
+      <tuv xml:lang="en">
+        <seg>SETTINGS</seg>
+      </tuv>
+    </tu>
     <tu tuid="52">
       <tuv xml:lang="fr">
         <seg>52</seg>
       </tuv>
+      <tuv xml:lang="en">
+        <seg>Change Mode</seg>
+      </tuv>
     </tu>
-    <tu tuid="53" />
+    <tu tuid="53">
+      <tuv xml:lang="en">
+        <seg>SETTINGS</seg>
+      </tuv>
+    </tu>
     <tu tuid="54" />
     <tu tuid="55" />
     <tu tuid="56" />

@@ -4,5 +4,6 @@
   <Objects>
     <Object Type="Package">Alarm</Object>
     <Object Type="Package">Visu</Object>
+    <Object Type="Package">Documentation</Object>
   </Objects>
 </Package>

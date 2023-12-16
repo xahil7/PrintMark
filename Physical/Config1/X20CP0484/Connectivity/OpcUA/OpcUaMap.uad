@@ -31,6 +31,7 @@
             <Variable Name="Position" />
           </Variable>
         </Variable>
+        <Variable Name="gMI_ModeConfirm" />
       </GlobalVariables>
       <Task Name="AutoCtrl">
         <Variable Name="pRegCapture">
@@ -44,6 +45,8 @@
         <Variable Name="pConvCtrl">
           <Variable Name="Cmd">
             <Variable Name="PrintMark" />
+            <Variable Name="JogFwd" />
+            <Variable Name="JogBack" />
           </Variable>
         </Variable>
         <Variable Name="pAx_CamSeq">
@@ -59,13 +62,34 @@
             <Variable Name="Stop" />
             <Variable Name="AutoMode" />
             <Variable Name="ChangeMode" />
+            <Variable Name="DisableCutter" />
+          </Variable>
+          <Variable Name="ManualCmd">
+            <Variable Name="ConvPowerON" />
+            <Variable Name="CutterPowerON" />
+            <Variable Name="CutterHome" />
+            <Variable Name="ConvHome" />
           </Variable>
         </Variable>
         <Variable Name="iMI_CurrentMode" />
+        <Variable Name="AutoCtrlState" />
+        <Variable Name="pCutterCtrl">
+          <Variable Name="Cmd">
+            <Variable Name="JogFwd" />
+            <Variable Name="JogBack" />
+          </Variable>
+        </Variable>
       </Task>
       <Task Name="Visu">
         <Variable Name="iMI_ConActSpeed" />
         <Variable Name="iMI_ConSetSpeed" />
+        <Variable Name="iMI_ConSetJogAcc" />
+        <Variable Name="iMI_ConSetJogDeacc" />
+        <Variable Name="iMI_ConSetJogVel" />
+        <Variable Name="iMI_CutActSpeed" />
+        <Variable Name="iMI_CutSetJogAcc" />
+        <Variable Name="iMI_CutSetJogDeacc" />
+        <Variable Name="iMI_CutSetJogVel" />
       </Task>
     </Module>
   </DefaultView>

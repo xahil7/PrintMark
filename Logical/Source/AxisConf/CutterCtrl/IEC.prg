@@ -8,7 +8,7 @@
     <File>Mapping.st</File>
     <File>SingleCutter.st</File>
     <File>DualCutter.st</File>
-    <File>SingleCutterCamAuto.st</File>
+    <File>CamAuto.st</File>
     <File>regCapture.st</File>
   </Files>
 </Program>
